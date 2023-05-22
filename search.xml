@@ -59,12 +59,6 @@ class="math inline">\(N^2\)</span>倍。</p></li>
 <li>在数据传输期间，在数据的源结点和目标结点之间有一条利用中间结点构成的一条专用的<strong>物理连接线路</strong>，直到数据传输的结束。</li>
 </ul></li>
 </ul>
-<figure>
-<img src="/assets/image-20230522181030419.png"
-alt="image-20230522181030419" />
-<figcaption aria-hidden="true">image-20230522181030419</figcaption>
-</figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>复习</category>
