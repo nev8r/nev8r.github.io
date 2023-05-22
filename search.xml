@@ -60,6 +60,7 @@ class="math inline">\(N^2\)</span>倍。</p></li>
 <li><p><img src="./assets/image-20230522172533132.png" /></p></li>
 </ul></li>
 </ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello&#x27;</span>)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>计算机网络</tag>
