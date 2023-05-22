@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Computer Network Review</title>
-    <url>/2023/05/22/Computer-Network-Review/</url>
-    <content><![CDATA[<h1 id="hello">hello</h1>
-<h2 id="hello-1">hello</h2>
-<h3 id="hello-2">hello</h3>
-]]></content>
-  </entry>
-  <entry>
     <title>计算机网络复习</title>
     <url>/2023/05/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</url>
     <content><![CDATA[<h2 id="课程考核">课程考核</h2>
@@ -64,13 +56,7 @@ class="math inline">\(N^2\)</span>倍。</p></li>
 <li>通信</li>
 <li>释放连接</li>
 </ul></li>
-<li><p>在数据传输期间，在数据的源结点和目标结点之间有一条利用中间结点构成的一条专用的<strong>物理连接线路</strong>，直到数据传输的结束。</p>
-<figure>
-<img
-src="./%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/image-20230522171641307.png"
-alt="image-20230522171641307" />
-<figcaption aria-hidden="true">image-20230522171641307</figcaption>
-</figure></li>
+<li><p>在数据传输期间，在数据的源结点和目标结点之间有一条利用中间结点构成的一条专用的<strong>物理连接线路</strong>，直到数据传输的结束。</p></li>
 </ul></li>
 </ul>
 ]]></content>
