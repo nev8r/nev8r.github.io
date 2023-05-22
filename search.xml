@@ -1,43 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2023/05/15/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very
-first post. Check <a href="https://hexo.io/docs/">documentation</a> for
-more info. If you get any problems when using Hexo, you can find the
-answer in <a
-href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or
-you can ask me on <a
-href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a
-href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <title>计算机网络复习</title>
+    <url>/2023/05/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%A4%8D%E4%B9%A0/</url>
+    <content><![CDATA[<h1 id="计算机网络复习">计算机网络复习</h1>
+<h2 id="课程考核">课程考核</h2>
+<ul>
+<li>作业
+<ul>
+<li>课堂作业</li>
+<li>课外作业</li>
+</ul></li>
+<li>考核：笔试+作业+实验+积极参与
+<ul>
+<li>笔试70%（期末）</li>
+<li>平时10% （作业，课堂表现，单元测试）</li>
+<li>实验20%</li>
+</ul></li>
+</ul>
+<h2 id="第一章-概述">第一章 概述</h2>
+<h3 id="计算机网络的作用">1.1 计算机网络的作用</h3>
+<ul>
+<li><p>网络的发展速度惊人</p></li>
+<li><p>网络现已成为信息社会的命脉和发展知识经济的重要基础,也是军队信息化建设的基础</p></li>
+<li><p>网络已经深刻地影响着人们的生活、社会的发展</p></li>
+<li><p>网络信息基础设施已成为一个国家赖以正常运转的‘神经系统’。</p></li>
+<li><p>各国都非常重视信息基础设施</p></li>
+<li><p>网络时代三大定律：</p>
+<ol type="1">
+<li><p>摩尔定律：CPU性能18个月翻番，10年能翻100倍。</p></li>
+<li><p>吉尔德定律：在未来25年，主干网的带宽每6个月增长一倍，其增长速度是摩尔定律预测的
+CPU 增长速度的3倍并预言将来上网会免费</p></li>
+<li><p>迈特卡尔夫定律:联网定律，网络价值与用户数平方成正比。未联网设备增加N倍，效率增加N倍。联网设备增加N倍，效率增加<span
+class="math inline">\(N^2\)</span>倍。</p></li>
+</ol></li>
+</ul>
+<h3 id="计算机网络的历史沿革">1.2 计算机网络的历史沿革</h3>
+<ul>
+<li>从网络到万维网</li>
+<li>信息网络：万维网</li>
+<li>网络发展的多维延伸</li>
+<li>网络到网络空间</li>
+</ul>
+<h4 id="计算机网络的形成">1.2.1 计算机网络的形成</h4>
+<ul>
+<li><p>计算机技术与通讯技术的结合
+：一方面，通信技术为计算机之间的数据传递和交换提供了必要手段；另一方面，计算机技术的发展应用到通信技术中，又提高了通信网络的各种性能。</p></li>
+<li><p>电路交换</p>
+<ul>
+<li>传统电话网使用电路交换</li>
+<li>交换：转接--把一条电话转接到另外一条电话线，使它们连通起来。</li>
+<li>从通信资源的分配角度来看，“交换”就是按照某种方式动态地分配传输线路的资源。</li>
+<li>电路交换的三个阶段
+<ul>
+<li>建立通信</li>
+<li>通信</li>
+<li>释放连接</li>
+</ul></li>
+</ul></li>
+</ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/2023/05/15/test/</url>
-    <content><![CDATA[
-]]></content>
-  </entry>
-  <entry>
-    <title>ps</title>
-    <url>/2023/05/15/ps/</url>
-    <content><![CDATA[
-]]></content>
+      <tags>
+        <tag>计算机网络</tag>
+        <tag>复习</tag>
+      </tags>
   </entry>
 </search>
