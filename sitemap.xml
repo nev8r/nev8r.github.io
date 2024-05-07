@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://nev8r.github.io/2024/05/07/diary/</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://nev8r.github.io/2024/05/06/english/</loc>
+    
+    <lastmod>2024-05-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://nev8r.github.io/2024/05/06/operating-system/</loc>
     
     <lastmod>2024-05-07</lastmod>
@@ -14,15 +32,6 @@
     <loc>http://nev8r.github.io/2024/05/06/computer-network/</loc>
     
     <lastmod>2024-05-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://nev8r.github.io/2024/05/06/english/</loc>
-    
-    <lastmod>2024-05-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -106,14 +115,14 @@
   </url>
   
   <url>
-    <loc>http://nev8r.github.io/tags/English/</loc>
+    <loc>http://nev8r.github.io/tags/os/</loc>
     <lastmod>2024-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://nev8r.github.io/tags/os/</loc>
+    <loc>http://nev8r.github.io/tags/English/</loc>
     <lastmod>2024-05-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
