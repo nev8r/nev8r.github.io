@@ -6,7 +6,7 @@
   <link href="http://nev8r.github.io/atom.xml" rel="self"/>
   
   <link href="http://nev8r.github.io/"/>
-  <updated>2024-05-06T10:31:02.263Z</updated>
+  <updated>2024-05-06T13:44:00.961Z</updated>
   <id>http://nev8r.github.io/</id>
   
   <author>
@@ -17,15 +17,52 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Operating System</title>
+    <link href="http://nev8r.github.io/2024/05/06/operating-system/"/>
+    <id>http://nev8r.github.io/2024/05/06/operating-system/</id>
+    <published>2024-05-06T12:03:21.000Z</published>
+    <updated>2024-05-06T13:44:00.961Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Operating-System&quot;&gt;&lt;a href=&quot;#Operating-System&quot; class=&quot;headerlink&quot; title=&quot;Operating System&quot;&gt;&lt;/a&gt;Operating System&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="Operating System" scheme="http://nev8r.github.io/categories/Operating-System/"/>
+    
+    
+    <category term="408" scheme="http://nev8r.github.io/tags/408/"/>
+    
+    <category term="os" scheme="http://nev8r.github.io/tags/os/"/>
+    
+  </entry>
+  
+  <entry>
     <title>English</title>
     <link href="http://nev8r.github.io/2024/05/06/english/"/>
     <id>http://nev8r.github.io/2024/05/06/english/</id>
     <published>2024-05-06T10:31:02.000Z</published>
-    <updated>2024-05-06T10:31:02.263Z</updated>
+    <updated>2024-05-06T11:53:29.738Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;English&quot;&gt;&lt;a href=&quot;#English&quot; class=&quot;headerlink&quot; title=&quot;English&quot;&gt;&lt;/a&gt;English&lt;/h1&gt;&lt;h2 id=&quot;2005&quot;&gt;&lt;a href=&quot;#2005&quot; class=&quot;headerlink&quot;</summary>
+        
+      
     
     
     
     
+    <category term="English" scheme="http://nev8r.github.io/tags/English/"/>
     
   </entry>
   
@@ -51,63 +88,6 @@
     <category term="408" scheme="http://nev8r.github.io/tags/408/"/>
     
     <category term="Network" scheme="http://nev8r.github.io/tags/Network/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高等数学</title>
-    <link href="http://nev8r.github.io/2024/05/06/gao-deng-shu-xue/"/>
-    <id>http://nev8r.github.io/2024/05/06/gao-deng-shu-xue/</id>
-    <published>2024-05-06T05:33:44.000Z</published>
-    <updated>2024-05-06T05:34:02.328Z</updated>
-    
-    
-    
-    
-    
-    <category term="高数" scheme="http://nev8r.github.io/tags/%E9%AB%98%E6%95%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test_my_site</title>
-    <link href="http://nev8r.github.io/2024/05/05/test-my-site/"/>
-    <id>http://nev8r.github.io/2024/05/05/test-my-site/</id>
-    <published>2024-05-05T14:42:29.000Z</published>
-    <updated>2024-05-05T16:14:46.732Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;pre class=&quot;line-numbers language-javascript&quot; data-language=&quot;javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;//</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://nev8r.github.io/2024/05/05/hello-world/"/>
-    <id>http://nev8r.github.io/2024/05/05/hello-world/</id>
-    <published>2024-05-05T14:41:51.933Z</published>
-    <updated>2024-05-05T14:41:51.933Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
-    
-    
-    
     
   </entry>
   
