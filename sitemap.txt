@@ -1,4 +1,6 @@
+http://nev8r.github.io/2024/05/06/english/
 http://nev8r.github.io/2024/05/06/operating-system/
+http://nev8r.github.io/2024/05/07/diary/
 http://nev8r.github.io/2024/05/06/computer-network/
 http://nev8r.github.io/404.html
 http://nev8r.github.io/friends/index.html
@@ -9,5 +11,7 @@ http://nev8r.github.io/categories/index.html
 http://nev8r.github.io/
 http://nev8r.github.io/tags/408/
 http://nev8r.github.io/tags/Network/
+http://nev8r.github.io/tags/English/
 http://nev8r.github.io/tags/os/
+http://nev8r.github.io/categories/English/
 http://nev8r.github.io/categories/Operating-System/
