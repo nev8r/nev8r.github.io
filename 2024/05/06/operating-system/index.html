@@ -8,8 +8,13 @@
     <meta name="description" content="Operating System一、计算机系统概述1.1 操作系统的基本概念1.1.1 操作系统的概念
 
 向上层提供方便易用的服务
-* GUI接口,调用程序接口实现
-* **联机**命令接口 ==  **交互式**命令接口 （用户讲一句，系">
+
+
+GUI接口,调用程序接口实现
+
+联机命令接口 ==  交互式命令接口 （用户讲一句，系统做一件句）
+
+脱">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -444,32 +449,61 @@
                 <h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><h2 id="一、计算机系统概述"><a href="#一、计算机系统概述" class="headerlink" title="一、计算机系统概述"></a>一、计算机系统概述</h2><h3 id="1-1-操作系统的基本概念"><a href="#1-1-操作系统的基本概念" class="headerlink" title="1.1 操作系统的基本概念"></a>1.1 操作系统的基本概念</h3><h4 id="1-1-1-操作系统的概念"><a href="#1-1-1-操作系统的概念" class="headerlink" title="1.1.1 操作系统的概念"></a>1.1.1 操作系统的概念</h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
 <img src="/2024/05/06/operating-system/image-20240507135631673.png" alt="作为系统资源的管理者">
 向上层提供方便易用的服务
-* GUI接口,调用程序接口实现
-* **联机**命令接口 ==  **交互式**命令接口 （用户讲一句，系统做一件句）
-* **脱机**命令接口 == **批处理**命令接口   
-* 程序接口 ：在程序中进行 **系统调用** 来使用程序接口。普通用户不可以直接使用，只能通过程序**间接**使用。（系统调用 == 广义指令）
-  * 系统调用的目的是请求系统服务
-  <img src="/2024/05/06/operating-system/image-20240507142006282.png" alt="向上层提供方便易用的服务">
-  <img src="/2024/05/06/operating-system/image-20240507173128360.png" alt="作为最接近硬件的层次">
-  <img src="/2024/05/06/operating-system/image-20240507142235927.png" alt="">
-  <img src="/2024/05/06/operating-system/image-20240507142309685.png" alt="本节回顾">
-  
+
+<ul>
+<li><p>GUI接口,调用程序接口实现</p>
+</li>
+<li><p><strong>联机</strong>命令接口 ==  <strong>交互式</strong>命令接口 （用户讲一句，系统做一件句）</p>
+</li>
+<li><p><strong>脱机</strong>命令接口 == <strong>批处理</strong>命令接口   </p>
+</li>
+<li><p>程序接口 ：在程序中进行 <strong>系统调用</strong> 来使用程序接口。普通用户不可以直接使用，只能通过程序<strong>间接</strong>使用。（系统调用 == 广义指令）</p>
+<ul>
+<li>系统调用的目的是请求系统服务</li>
+</ul>
+</li>
+</ul>
+<img src="/2024/05/06/operating-system/image-20240507142006282.png" alt="向上层提供方便易用的服务">
+<img src="/2024/05/06/operating-system/image-20240507173128360.png" alt="作为最接近硬件的层次">
+<img src="/2024/05/06/operating-system/image-20240507142235927.png" alt="">
+<img src="/2024/05/06/operating-system/image-20240507142309685.png" alt="本节回顾">
+
 <h4 id="1-1-2-操作系统的四个特征"><a href="#1-1-2-操作系统的四个特征" class="headerlink" title="1.1.2 操作系统的四个特征"></a>1.1.2 操作系统的四个特征</h4><img src="/2024/05/06/operating-system/image-20240507143157625.png" alt="并发性">
 <img src="/2024/05/06/operating-system/image-20240507143324793.png" alt="共享性">
-* 同时共享（并发访问）
-* 互斥共享
+
+<ul>
+<li><p>同时共享（并发访问）</p>
+</li>
+<li><p>互斥共享</p>
+</li>
+</ul>
 <img src="/2024/05/06/operating-system/image-20240507143642095.png" alt="并发和共享的关系">
 **并发和共享的关系**
-* 互为存在条件
-* 没有并发就没有共享
-* 没有共享就没有并发
+
+<ul>
+<li><p>互为存在条件</p>
+</li>
+<li><p>没有并发就没有共享</p>
+</li>
+<li><p>没有共享就没有并发</p>
+</li>
+</ul>
 <img src="/2024/05/06/operating-system/image-20240507143948167.png" alt="虚拟">
 <img src="/2024/05/06/operating-system/image-20240507144024079.png" alt="虚拟性技术">
-* 空分复用技术
-* 虚拟处理器技术（时分复用技术）（并发性）
-* 没有并发就没有虚拟性
+
+<ul>
+<li><p>空分复用技术</p>
+</li>
+<li><p>虚拟处理器技术（时分复用技术）（并发性）</p>
+</li>
+<li><p>没有并发就没有虚拟性</p>
+</li>
+</ul>
 <img src="/2024/05/06/operating-system/image-20240507144347149.png" alt="异步性">
-* 并发性才会导致异步性
+
+<ul>
+<li>并发性才会导致异步性</li>
+</ul>
 <img src="/2024/05/06/operating-system/image-20240507144532608.png" alt="小节回顾">
 
 
@@ -555,6 +589,26 @@
 <li>加载加载启动管理器。</li>
 <li>加载操作系统。</li>
 </ol>
+<h3 id="1-6-虚拟机"><a href="#1-6-虚拟机" class="headerlink" title="1.6 虚拟机"></a>1.6 虚拟机</h3><p>利用虚拟化技术将物理机虚拟化为多台虚拟机，每台虚拟机独立运行操作系统</p>
+ <img src="/2024/05/06/operating-system/image-20240509161550073.png" alt="虚拟机管理程序">
+
+<ul>
+<li><p>第一类虚拟机管理程序</p>
+<ul>
+<li>直接运行在硬件上</li>
+<li>内核态是虚拟内核态</li>
+<li>执行特权指令时候被VMM截获管理</li>
+<li>可以让指令特权等级进一步细分</li>
+</ul>
+</li>
+<li><p>第二类虚拟管理程序</p>
+<ul>
+<li>运行在宿主机上</li>
+</ul>
+</li>
+<li><p>对比</p>
+<img src="/2024/05/06/operating-system/image-20240509162220863.png" alt="两类虚拟机管理器对比"></li>
+</ul>
 
                 
             </div>
