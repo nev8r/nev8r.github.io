@@ -5,14 +5,15 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Operating System, Hexo">
-    <meta name="description" content="Operating System1. 计算机系统概述1.1. 操作系统的基本概念1.1.1. 操作系统的概念
+    <meta name="description" content="Operating System&amp;lt;&amp;lt; –toc– &amp;gt;&amp;gt;
+1. 计算机系统概述1.1. 操作系统的基本概念1.1.1. 操作系统的概念
 
 向上层提供方便易用的服务
 
 
 GUI 接口, 调用程序接口实现
 
-联机 命令接口 ==  交互式 命令接口 （用户讲一句，系统做">
+联机 命令接口">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -444,7 +445,8 @@ GUI 接口, 调用程序接口实现
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><h2 id="1-计算机系统概述"><a href="#1-计算机系统概述" class="headerlink" title="1. 计算机系统概述"></a>1. 计算机系统概述</h2><h3 id="1-1-操作系统的基本概念"><a href="#1-1-操作系统的基本概念" class="headerlink" title="1.1. 操作系统的基本概念"></a>1.1. 操作系统的基本概念</h3><h4 id="1-1-1-操作系统的概念"><a href="#1-1-1-操作系统的概念" class="headerlink" title="1.1.1. 操作系统的概念"></a>1.1.1. 操作系统的概念</h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
+                <h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><p>&lt;&lt; –toc– &gt;&gt;</p>
+<h2 id="1-计算机系统概述"><a href="#1-计算机系统概述" class="headerlink" title="1. 计算机系统概述"></a>1. 计算机系统概述</h2><h3 id="1-1-操作系统的基本概念"><a href="#1-1-操作系统的基本概念" class="headerlink" title="1.1. 操作系统的基本概念"></a>1.1. 操作系统的基本概念</h3><h4 id="1-1-1-操作系统的概念"><a href="#1-1-1-操作系统的概念" class="headerlink" title="1.1.1. 操作系统的概念"></a>1.1.1. 操作系统的概念</h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
 <img src="/2024/05/06/operating-system/image-20240507135631673.png" alt="作为系统资源的管理者">
 向上层提供方便易用的服务
 
@@ -510,7 +512,7 @@ GUI 接口, 调用程序接口实现
 <img src="/2024/05/06/operating-system/image-20240507162727941.png" alt="内核程序和应用程序">
 <img src="/2024/05/06/operating-system/image-20240507162846800.png" alt="特权指令和非特权指令">
 <img src="/2024/05/06/operating-system/image-20240507163336783.png" alt="内核态和用户态">
-<img src="/2024/05/06/operating-system/image-20240507164040601.png" alt=" cpu状态切换">
+<img src="/2024/05/06/operating-system/image-20240507164040601.png" alt=" CPU状态切换">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507165534868.png" alt="小节回顾">
 
 <h4 id="1-3-2-中断和异常"><a href="#1-3-2-中断和异常" class="headerlink" title="1.3.2. 中断和异常"></a>1.3.2. 中断和异常</h4><img src="/2024/05/06/operating-system/image-20240507170042787.png" alt="中断和异常">
@@ -533,7 +535,7 @@ GUI 接口, 调用程序接口实现
 
 <ol>
 <li>将系统调用号和所需要的参数压入堆栈</li>
-<li>执行陷入指令，cpu 用户态 -&gt; 内核态 （执行中断）</li>
+<li>执行陷入指令，CPU 用户态 -&gt; 内核态 （执行中断）</li>
 <li>分析系统调用类型，处理系统调用子程序</li>
 <li>退出中断，恢复现场<img src="/2024/05/06/operating-system/image-20240507190258909.png" alt="库函数调用">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507190428113.png" alt="小节回顾"></li>
@@ -568,7 +570,7 @@ GUI 接口, 调用程序接口实现
 <h3 id="1-5-操作系统引导"><a href="#1-5-操作系统引导" class="headerlink" title="1.5. 操作系统引导"></a>1.5. 操作系统引导</h3><img src="/2024/05/06/operating-system/image-20240508220337850.png" alt="操作系统引导">
 
 <ol>
-<li>激活 cpu。读取 rom 中的 boot 程序，指令寄存器读入 bios 第一条指令，开始执行 bios 的指令。</li>
+<li>激活 CPU。读取 rom 中的 boot 程序，指令寄存器读入 bios 第一条指令，开始执行 bios 的指令。</li>
 <li>硬件自检。初始化中断向量表，通电自检，检查硬件是否故障</li>
 <li>加载带有操作系统的硬盘。加载该存储设备的引导扇区进入内存。</li>
 <li>加载主引导记录（MBR）。MBR 的作用是告诉 CPU 去哪个主分区去找操作系统。</li>
@@ -606,10 +608,24 @@ GUI 接口, 调用程序接口实现
 
 <h5 id="2-1-1-2-进程的特征"><a href="#2-1-1-2-进程的特征" class="headerlink" title="2.1.1.2. 进程的特征"></a>2.1.1.2. 进程的特征</h5><img src="/2024/05/06/operating-system/image-20240509185949192.png" alt="进程的特征">
 
+<blockquote>
+<ul>
+<li>动态性是进程最重要的特性，用以区分静态程序。引入进程，是为了从变化的角度动态分析和研究程序的执行。</li>
+<li>程序封闭性是指进程执行的结果只取决于进程本身。失去封闭性之后，不同速度下执行结果不同。</li>
+</ul>
+</blockquote>
 <h4 id="2-1-2-进程的组成"><a href="#2-1-2-进程的组成" class="headerlink" title="2.1.2. 进程的组成"></a>2.1.2. 进程的组成</h4><p>一个程序开始运行前，创建对应进程和 PCB。</p>
-<p>一个进程的实体由 <strong>PCB、进程段、数据段</strong> 组成。</p>
+<p>一个进程的实体由 <strong>PCB、程序段、数据段</strong> 组成。</p>
 <p>进程是动态的，进程实体是静态的。</p>
+<blockquote>
+<p><span style="color:#FF0000;"> 注意 </span>：</p>
+<ul>
+<li>进程映像就是进程实体</li>
+</ul>
+</blockquote>
 <img src="/2024/05/06/operating-system/image-20240509185611464.png" alt="进程的组成">
+
+
 
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240509190019403.png" alt="小节回顾"></p>
 <h4 id="2-1-3-进程的状态和转换"><a href="#2-1-3-进程的状态和转换" class="headerlink" title="2.1.3. 进程的状态和转换"></a>2.1.3. 进程的状态和转换</h4><h5 id="2-1-3-1-进程的状态"><a href="#2-1-3-1-进程的状态" class="headerlink" title="2.1.3.1. 进程的状态"></a>2.1.3.1. 进程的状态</h5><img src="/2024/05/06/operating-system/image-20240510155944466.png" alt="进程的状态">
@@ -630,8 +646,19 @@ GUI 接口, 调用程序接口实现
 </ol>
 </li>
 </ol>
+<p><strong>进程的七状态模型</strong></p>
+<img src="/2024/05/06/operating-system/image-20240511164336667.png" alt="七状态模型">
+
+
+
 <h5 id="2-1-3-2-进程的转换"><a href="#2-1-3-2-进程的转换" class="headerlink" title="2.1.3.2. 进程的转换"></a>2.1.3.2. 进程的转换</h5><img src="/2024/05/06/operating-system/image-20240510155816525.png" alt="进程的转换">
 
+<blockquote>
+<ul>
+<li>进程的生命周期是不连续的，可能因为阻塞和 CPU 抢占停止运行。</li>
+<li>可能出现死锁的状态，全部进程处于阻塞态。</li>
+</ul>
+</blockquote>
 <h5 id="2-1-3-3-进程的组织"><a href="#2-1-3-3-进程的组织" class="headerlink" title="2.1.3.3. 进程的组织"></a>2.1.3.3. 进程的组织</h5><img src="/2024/05/06/operating-system/image-20240510160520637.png" alt="进程的组织方式">
 
 <ol>
@@ -717,6 +744,11 @@ GUI 接口, 调用程序接口实现
 </ol>
 </li>
 </ol>
+<blockquote>
+<ul>
+<li>最快的进程通信方式是共享内存。</li>
+</ul>
+</blockquote>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240510172250107.png" alt="小节回顾"></p>
 <h4 id="2-1-6-线程和多线程模型"><a href="#2-1-6-线程和多线程模型" class="headerlink" title="2.1.6. 线程和多线程模型"></a>2.1.6. 线程和多线程模型</h4><h5 id="2-1-6-1-线程的基本概念-线程与进程的比较"><a href="#2-1-6-1-线程的基本概念-线程与进程的比较" class="headerlink" title="2.1.6.1. 线程的基本概念&amp;&amp;线程与进程的比较"></a>2.1.6.1. 线程的基本概念&amp;&amp;线程与进程的比较</h5><ol>
 <li><p>线程是 <strong>轻量级进程</strong>，CPU 调度的单位。</p>
@@ -733,13 +765,16 @@ GUI 接口, 调用程序接口实现
 </li>
 </ol>
 </li>
+<li><p>线程的有点有提高系统的并发性，节约系统资源，便于进程通信。</p>
+</li>
 </ol>
 <img src="/2024/05/06/operating-system/image-20240510182820150.png" alt="引入线程后的变化">
 
 <h5 id="2-1-6-2-线程的属性"><a href="#2-1-6-2-线程的属性" class="headerlink" title="2.1.6.2. 线程的属性"></a>2.1.6.2. 线程的属性</h5><img src="/2024/05/06/operating-system/image-20240510183553446.png" alt="线程的属性">
 
 <h5 id="2-1-6-3-线程的实现方式"><a href="#2-1-6-3-线程的实现方式" class="headerlink" title="2.1.6.3. 线程的实现方式"></a>2.1.6.3. 线程的实现方式</h5><ol>
-<li><strong>用户级线程</strong> <img src="/2024/05/06/operating-system/image-20240510190608556.png" alt="image-20240510190608556" style="zoom: 33%;"><ol>
+<li><p><strong>用户级线程</strong> <img src="/2024/05/06/operating-system/image-20240510190608556.png" alt="用户级别线程" style="zoom: 33%;"></p>
+<ol>
 <li>线程库实现，早期操作系统不支持线程。</li>
 <li>操作系统看不到线程，用户级线程是“从用户视角看到的线程“。</li>
 <li>线程管理工作是由（<strong>应用程序</strong>）线程库完成。</li>
@@ -754,8 +789,12 @@ GUI 接口, 调用程序接口实现
 </ol>
 </li>
 </ol>
+<blockquote>
+<p>可能导致用户级别线程切换的事件是线程同步等。</p>
+</blockquote>
 </li>
-<li><strong>内核级线程</strong> <img src="/2024/05/06/operating-system/image-20240510191539194.png" alt="内核级线程" style="zoom:33%;"><ol>
+<li><p><strong>内核级线程</strong> <img src="/2024/05/06/operating-system/image-20240510191539194.png" alt="内核级线程" style="zoom:33%;"></p>
+<ol>
 <li>由操作系统支持的线程，操作系统视角可以看到线程。</li>
 <li>线程管理工作由操作系统支持。</li>
 <li>线程的切换需要操作系统介入，需要状态切换。</li>
@@ -772,7 +811,8 @@ GUI 接口, 调用程序接口实现
 </li>
 </ol>
 </li>
-<li><strong>组合方式</strong></li>
+<li><p><strong>组合方式</strong></p>
+</li>
 </ol>
 <h5 id="2-1-6-4-多线程模型"><a href="#2-1-6-4-多线程模型" class="headerlink" title="2.1.6.4. 多线程模型"></a>2.1.6.4. 多线程模型</h5><ol>
 <li><p><strong>一对一模式</strong> <img src="/2024/05/06/operating-system/image-20240510192530025.png" alt="一对一模型" style="zoom:33%;"></p>
@@ -807,7 +847,7 @@ GUI 接口, 调用程序接口实现
 </ol>
 </li>
 </ol>
-<p>** 小节回顾 **</p>
+<p>小节回顾</p>
 <img src="/2024/05/06/operating-system/image-20240510204453670.png" alt="小节回顾 ">
 
 
@@ -818,6 +858,238 @@ GUI 接口, 调用程序接口实现
 
 <h5 id="2-1-6-6-线程的组织与控制"><a href="#2-1-6-6-线程的组织与控制" class="headerlink" title="2.1.6.6. 线程的组织与控制"></a>2.1.6.6. 线程的组织与控制</h5><p><strong>线程控制块</strong> <img src="/2024/05/06/operating-system/image-20240510214328419.png" alt="线程控制块" style="zoom:50%;"></p>
 <p><strong>线程表</strong> <img src="/2024/05/06/operating-system/image-20240510214417465.png" alt="线程表" style="zoom:33%;"></p>
+<h3 id="CPU-调度"><a href="#CPU-调度" class="headerlink" title="CPU 调度"></a>CPU 调度</h3><h4 id="调度的概念"><a href="#调度的概念" class="headerlink" title="调度的概念"></a>调度的概念</h4><h5 id="调度的基本概念"><a href="#调度的基本概念" class="headerlink" title="调度的基本概念"></a>调度的基本概念</h5><p><strong>CPU 调度</strong>：CPU 的调度是对 CPU 的分配，从就绪队列中按照一定的算法选择一个进程上 CPU 执行。</p>
+<h5 id="调度的层次"><a href="#调度的层次" class="headerlink" title="调度的层次"></a>调度的层次</h5><ol>
+<li><strong>高级调度（作业调度）</strong> <img src="/2024/05/06/operating-system/image-20240511163147576.png" alt="作业调度" style="zoom:67%;"><ol>
+<li><strong>作业的概念</strong>：一个具体的任务。用户向操作系统提交一个任务约等于用户让操作系统启动一个程序。</li>
+<li>简化理解：好几个程序需要启动，到底启动哪一个。</li>
+<li>高级调度：按照一定的原则从 <strong>外存的作业后备队列</strong> 中挑选一个作业 <strong>调入内存</strong>，并且创建进程。</li>
+<li><strong>每个作业之调入一次，调出一次。</strong> 作业调入时创建 PCB，调出出撤销 PCB。</li>
+<li>需要调度的原因是内存空间有限。</li>
+</ol>
+</li>
+<li><strong>低级调度（进程调度/处理机调度）</strong> <img src="/2024/05/06/operating-system/image-20240511163615430.png" alt="进程调度" style="zoom:67%;"><ol>
+<li>低级调度：按照某种策略从就绪队列中选取一个进程，将处理机分配给它。</li>
+<li>进程调度是操作系统中最基本的一种调度，在一般的操作系统中都必须配置进程调度进程调度的频率很高，一般几十毫秒一次。</li>
+</ol>
+</li>
+<li><strong>中级调度（内存调度）</strong> <img src="/2024/05/06/operating-system/image-20240511164220301.png" alt="中级调度" style="zoom: 50%;"><ol>
+<li>按照某种策略决定将哪个处于挂起状态的进程重新调入内存。</li>
+<li>内存不够时，可将某些进程的数据调出外存。等内存空闲或者进程需要运行时再重新调入内存。</li>
+<li>暂时调到外存等待的进程状态为 <strong>挂起状态</strong>。被挂起的进程 PCB 会被组织成 <strong>挂起队列</strong>。</li>
+<li>一个进程可能会被多次调出、调入内存，因此 <strong>中级调度发生的频率要比高级调度更高</strong></li>
+</ol>
+</li>
+<li><strong>三种调度的联系和对比</strong> <img src="/2024/05/06/operating-system/image-20240511164623661.png" alt="三种调度的联系和对比"></li>
+</ol>
+<h5 id="小节回顾"><a href="#小节回顾" class="headerlink" title="小节回顾 "></a>小节回顾 <img src="/2024/05/06/operating-system/image-20240511164753901.png" alt="小节回顾"></h5><h4 id="调度的实现"><a href="#调度的实现" class="headerlink" title="调度的实现"></a>调度的实现</h4><h5 id="进程调度的时机、切换和过程"><a href="#进程调度的时机、切换和过程" class="headerlink" title="进程调度的时机、切换和过程"></a>进程调度的时机、切换和过程</h5><p><strong>进程调度的时机</strong></p>
+<ol>
+<li>需要进程调度与切换的情况<ol>
+<li>当前进程 <strong>主动放弃</strong> 处理机<ol>
+<li>进程正常终止</li>
+<li>发生异常</li>
+<li>阻塞</li>
+</ol>
+</li>
+<li>当前进程 <strong>被动放弃</strong> 处理机<ol>
+<li>时间片用完</li>
+<li>中断</li>
+<li>高优先级进程抢占</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>不需要进程调度与切换的情况<ol>
+<li>处理中断的过程中</li>
+<li><strong>进程在操作系统内核临界区中</strong></li>
+<li>在原子操作中</li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>进程在 <strong>操作系统内核程序临界区</strong> 中 <strong>不能</strong> 进行调度和切换  <span style="color:#006600;"> 正确 </span></p>
+<p>进程处于 <strong>临界区</strong> 时 <strong>不能</strong> 进行处理机调度 <span style="color:#FF0000;"> 错误 </span></p>
+<p>临界资源: 一个时间段内只允许一个进程使用的资源。各进程需要互斥地访问临界资源</p>
+<p>临界区: 访问临界资源的那段代码。</p>
+<p><strong>内核程序临界区</strong> 一般是用来访问 <strong>某种内核数据结构</strong> 的，比如进程的就绪队列(由各就绪进程的 PCB 组成)</p>
+</blockquote>
+<p><strong>进程的切换与过程</strong></p>
+<ul>
+<li><p>“狭义的进程调度”与“进程切换”的区别:</p>
+<ul>
+<li>狭义的进程调度指的是从就绪队列中选中一个要运行的进程。(这个进程可以是刚刚被暂停执行的进程, 也可能是另一个进程，后一种情况就需要进程切换)进程切换是指一个进程让出处理机，由另一个进程占用处理机的过程。</li>
+<li>广义的进程调度包含了选择一个进程和进程切换两个步骤。</li>
+</ul>
+</li>
+<li><p>进程调度主要完成了</p>
+<ol>
+<li>对原来的数据的保存</li>
+<li>对新的进程的数据的恢复</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p>注意: 进程切换是有代价的，因此如果过于频繁的进行进程调度、切换，必然会使整个系统的效率降低，使系统大部分时间都花在了进程切换上，而真正用于执行进程的时间减少。</p>
+</blockquote>
+<h5 id="进程调度的方式"><a href="#进程调度的方式" class="headerlink" title="进程调度的方式"></a>进程调度的方式</h5><ol>
+<li>非剥夺调度方式（非抢占式）只允许进程主动放弃处理机。<ol>
+<li>实现简单，系统管理开销小</li>
+<li>无法处理紧急任务，适合早期批处理器</li>
+</ol>
+</li>
+<li>剥夺调度方式（抢占方式）<ol>
+<li>可以实现优先处理更紧急的进程</li>
+<li>可以实现时间片轮流执行的功能</li>
+<li>适合分时操作系统，实时操作系统</li>
+</ol>
+</li>
+</ol>
+<p><strong>小节回顾</strong></p>
+<img src="/2024/05/06/operating-system/image-20240511173637068.png" alt="小节回顾">
+
+
+
+
+
+
+
+<h5 id="调度器"><a href="#调度器" class="headerlink" title="调度器"></a>调度器</h5><img src="/2024/05/06/operating-system/image-20240511191620254.png" alt="调度程序触发时机" style="zoom:67%;">
+
+<blockquote>
+<p>不支持内核级线程的操作系统，调度程序的处理对象是进程<br>支持内核级线程的操作系统，调度程序的处理对象是内核线程</p>
+</blockquote>
+<h5 id="闲逛进程"><a href="#闲逛进程" class="headerlink" title="闲逛进程"></a>闲逛进程</h5><ul>
+<li>优先级最低</li>
+<li>能耗低</li>
+<li>0 地址指令，占一个完整的指令周期</li>
+</ul>
+<h4 id="调度的目标（评价指标）"><a href="#调度的目标（评价指标）" class="headerlink" title="调度的目标（评价指标）"></a>调度的目标（评价指标）</h4><ol>
+<li><p><strong>CPU 利用率</strong>: 指 CPU 处与忙率的时间占总时间的比例<br>$$<br>CPU 利用率 = \frac{CPU 有效工作时间}{CPU 有效工作时间 + CPU 空闲等待时间}<br>$$</p>
+</li>
+<li><p><strong>系统吞吐量</strong>: 单位时间内完成是作业数量<br>$$<br>系统吞吐量 = \frac{总共完成了多少道作业}{总共花了多少时间}<br>$$</p>
+</li>
+<li><p><strong>周转时间</strong>：指从作业被提交给系统开始道作业完成为止的时间间隔。</p>
+<ol>
+<li><p>作业在外存后备队列上等待作业调度(高级调度)的时间</p>
+</li>
+<li><p>进程在就绪队列上等待进程调度(低级调度)的时间</p>
+</li>
+<li><p>进程在 CPU 上执行的时间</p>
+</li>
+<li><p>进程等待 I/0 操作完成的时间。</p>
+<blockquote>
+<p> 后三项在一个作业的整个处理过程中，可能发生多次。</p>
+</blockquote>
+<p>$$<br>周转时间 =  作业完成时间 -  作业提交时间  \\<br>平均周转时间 = \frac{各作业周转时间之和}{作业数}<br>$$</p>
+</li>
+</ol>
+</li>
+<li><p><strong>带权周转时间</strong><br>$$<br>带权周转时间 =  \frac{作业周转时间}{作业实际运行的时间} =  \frac{作业完成时间 - 作业提交时间}{作业实际运行的时间}\\<br>平均带权周转时间 = \frac{各作业带权周转时间之和}{作业数}<br>$$</p>
+<blockquote>
+<p>带权周转时间必然大于一</p>
+<p>带权周转时间与周转时间一样是越小越好</p>
+</blockquote>
+</li>
+<li><p><strong>等待时间</strong>：指进程/作业处于等待处理机状态时间之和。用于衡量一个调度算法的优劣。</p>
+<ol>
+<li>对于进程来说，<strong>等待时间就是指进程建立后等待被服务的时间之和</strong>，在等待 I/0 完成的期间其实进<br>程也是在被服务的，<span style="color:#FF0000;"> 所以不计入等待时间 </span>。</li>
+<li>对于作业来说，<strong>不仅要考虑建立进程后的等待时间</strong>，<strong>还要加上作业在外存后备队列中等待的时间</strong></li>
+</ol>
+</li>
+<li><p><strong>响应时间</strong>:  指从用户提交请求到首次产生响应的时间。</p>
+</li>
+</ol>
+<p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240511195435454.png" alt="小节回顾" style="zoom:80%;"></p>
+<h4 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h4><h5 id="先来先服务（FCFS）"><a href="#先来先服务（FCFS）" class="headerlink" title="先来先服务（FCFS）"></a>先来先服务（FCFS）</h5><ol>
+<li>算法思想：从”公平“的角度的考虑，谁先来先给谁服务</li>
+<li>算法规则：按照作业/进程到达的先后顺序进行服务</li>
+<li>调度：<ol>
+<li>用于作业调度时，考虑的是哪个作业先到达后备队列;</li>
+<li>用于进程调度时，考虑的是哪个进程先到达就绪队列</li>
+</ol>
+</li>
+<li>是否可抢占  非抢占式算法</li>
+<li>优缺点<ol>
+<li>优点：公平，算法实现简单</li>
+<li>缺点：排在长作业（进程）后面的短作业需要等待很长时间，带转周转时间很大，对短作业不友好。<strong>FCFS 算法对长作业有利，对短作业不利</strong>。</li>
+</ol>
+</li>
+<li>是否导饥饿   <strong>不会导致饥饿</strong></li>
+</ol>
+<h5 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h5><ol>
+<li>算法思想：追求最少的平均等待时间，最少的平均周转时间、最少的平均平均带权周转时间</li>
+<li>算法规则：最短的作业/进程优先得到服务(所谓“最短”，是指要求服务时间最短)</li>
+<li>调度：<ol>
+<li>可用于作业调度</li>
+<li>用于进程调度时，”短进程优先（SPF）”</li>
+</ol>
+</li>
+<li>是否可抢占  （默认是非抢占式）<ol>
+<li>非抢占式（SJF 和 SPF）<img src="/2024/05/06/operating-system/image-20240511201637828.png" alt="SPF or SJF" style="zoom: 50%;"></li>
+<li>抢占式算法 （最短剩余时间优先算法（SRTN））<img src="/2024/05/06/operating-system/image-20240511201601225.png" alt="SRNT" style="zoom:33%;"></li>
+</ol>
+</li>
+<li>优缺点<ol>
+<li>优点：“最短的”平均等待时间、平均周转时间</li>
+<li>缺点: 不公平。<strong>对短作业有利，对长作业不利</strong>。可能产生 <strong>饥饿现象</strong>。另外，作业/进程的运行时间是由用户提供的，并不一定真实，不一定能做到真正的短作业优先</li>
+</ol>
+</li>
+<li>是否导饥饿   如果源源不断地有短作业/进程到来，可能使长作业/进程长时间得不到服务，产生“<strong>饥饿”</strong> 现象。如果一直得不到服务，则称为**“饿死 “ **</li>
+</ol>
+<blockquote>
+<p>注意几个小细节:</p>
+<ol>
+<li><p>如果题目中未特别说明，所提到的“短作业/进程优先算法”<span style="color:#FF0000;"> 默认是非抢占式的 </span></p>
+</li>
+<li><p>很多书上都会说“SJF 调度算法的平均等待时间、平均周转时间最少”严格来说，这个表述是错误的，不严谨的。之前的例子表明，最短剩余时间优先算法得到的平均等待时间、平均周转时间还要更少应该加上一个条件“<span style="color:#FF0000;"> 在所有进程同时可运行时，采用 SIF 调度算法的平均等待时间、平均周转时间最少 </span>”: 或者说“<span style="color:#FF0000;"> 在所有进程都几乎同时到达时，采用 SJF 调度算法的平均等待时间、平均周转时间最少 </span>”</p>
+</li>
+<li><p>如果不加上述前提条件，则应该说“<span style="color:#FF0000;"> 抢占式的短作业/进程优先调度算法(最短剩余时间优先, SRNT 算法)的平均等待时间、平均周转时间最少 </span>”<br>虽然严格来说，SJF 的平均等待时间、平均周转时间并不一定最少，但相比于其他算法(如 FCFS)3.SIF 依然可以获得较少的平均等待时间、平均周转时间</p>
+</li>
+<li><p>如果选择题中遇到“SJF 算法的平均等待时间、平均周转时间最少”的选项，那最好判断其他选项是不是有很明显的错误，如果没有更合适的选项，那也应该选择该选项</p>
+</li>
+</ol>
+</blockquote>
+<h5 id="高响应比优先"><a href="#高响应比优先" class="headerlink" title="高响应比优先 "></a>高响应比优先 <img src="/2024/05/06/operating-system/image-20240511203748966.png" alt="HRRN" style="zoom: 33%;"></h5><ol>
+<li><p>算法思想：要综合考虑作业/进程的等待时间和要求服务的时间</p>
+</li>
+<li><p>算法规则：在每次调度时先计算各个作业/进程的 <strong>响应比</strong>，选择 <strong>响应比最高</strong> 的作业/进程为其服务<br>$$<br>响应比 = \frac{等待时间 + 要求服务时间}{要求服务时间} &gt; 1<br>$$</p>
+</li>
+<li><p>调度：都可</p>
+</li>
+<li><p>是否可抢占  非抢占式算法，只有当前进程主动放弃时才会调度</p>
+</li>
+<li><p>优缺点：综合考虑了等待时间和运行时间(要求服务时间)等待时间相同时，要求服务时间短的优先(SIF 的优点)要求服务时间相同时，等待时间长的优先(FCFS 的优点)对于长作业来说，随着等待时间越来越久，其响应比也会越来越大，从而避免了长作业饥饿的问题</p>
+</li>
+<li><p>是否导饥饿   <strong>不会导致饥饿</strong></p>
+</li>
+</ol>
+<h5 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h5><img src="/2024/05/06/operating-system/image-20240511204452770.png" alt="对比" style="zoom: 50%;">
+
+<h5 id="时间片轮转调度"><a href="#时间片轮转调度" class="headerlink" title="时间片轮转调度"></a>时间片轮转调度</h5><ol>
+<li><p>算法思想：公平地、轮流地为各个进程服务，让每个进程在一定时间间隔内都可以得到响应</p>
+</li>
+<li><p>算法规则：按照各进程到达就绪队列的顺序，轮流让各个进程执行一个<strong>时间片</strong>(如100ms)。若进程未在一个时间片内执行完则剥夺处理机，将进程重新放到就绪队列队尾重新排队。</p>
+</li>
+<li><p>用于作业/进程调度： 用于进程调度(只有作业放入内存建立了相应的进程后，才能被分配处理机时间片)</p>
+</li>
+<li><p>是否可抢占? </p>
+<p>若进程未能在时间片内运行完，将被强行剥夺处理机使用权，因此时间片轮转调度算法属于<strong>抢占式</strong>的算法。由时钟装置发出<strong>时钟中断</strong>来通知CPU时间片已到</p>
+</li>
+<li><p>优缺点</p>
+<ol>
+<li>优点:公平;响应快，适用于分时操作系统:</li>
+<li>缺点:由于高频率的进程切换，因此有一定开销;不区分任务的紧急程度。</li>
+</ol>
+</li>
+<li><p>是否会导致饥饿   不会</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>如果<strong>时间片太大</strong>，使得每个进程都可以在一个时间片内就完成，则时间片轮转调度算法<strong>退化为先来先服务调度算法</strong>并且会<strong>增大进程响应时间</strong>。因此时间片不能太大。</li>
+<li>另一方面，进程调度、切换是有时间代价的(保存、恢复运行环境)，因此<strong>如果时间片太小</strong>，会导致<strong>进程切换过于频繁</strong>，系统会花大量的时间来处理进程切换，从而导致实际用于进程执行的时间比例减少。可见时间片也不能太小。</li>
+</ul>
+</blockquote>
 
                 
             </div>
@@ -1188,6 +1460,14 @@ GUI 接口, 调用程序接口实现
     
 
 </main>
+
+
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
 
 
 
