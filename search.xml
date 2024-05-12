@@ -25,11 +25,7 @@
   <entry>
     <title>Operating System</title>
     <url>/2024/05/06/operating-system/</url>
-    <content><![CDATA[<h1><span id="operating-system">Operating System</span></h1><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="计算机系统概述">计算机系统概述</span></h2><h3><span id="操作系统的基本概念">操作系统的基本概念</span></h3><h4><span id="操作系统的概念">操作系统的概念</span></h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
+    <content><![CDATA[<h1><span id="operating-system">Operating System</span></h1><h2><span id="计算机系统概述">计算机系统概述</span></h2><h3><span id="操作系统的基本概念">操作系统的基本概念</span></h3><h4><span id="操作系统的概念">操作系统的概念</span></h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
 <img src="/2024/05/06/operating-system/image-20240507135631673.png" alt="作为系统资源的管理者">
 向上层提供方便易用的服务
 
