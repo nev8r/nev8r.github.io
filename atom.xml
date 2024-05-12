@@ -28,7 +28,7 @@
       
         
         
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;operating-system&quot;&gt;Operating System&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;计算机系统概述&quot;&gt;计算机系统概述&lt;/span&gt;&lt;/h2&gt;&lt;h3&gt;&lt;span</summary>
+    <summary type="html">&lt;h1 id=&quot;Operating-System&quot;&gt;&lt;a href=&quot;#Operating-System&quot; class=&quot;headerlink&quot; title=&quot;Operating System&quot;&gt;&lt;/a&gt;Operating System&lt;/h1&gt;&lt;h2</summary>
         
       
     
@@ -40,31 +40,6 @@
     <category term="408" scheme="http://nev8r.github.io/tags/408/"/>
     
     <category term="os" scheme="http://nev8r.github.io/tags/os/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Computer Network</title>
-    <link href="http://nev8r.github.io/2024/05/06/computer-network/"/>
-    <id>http://nev8r.github.io/2024/05/06/computer-network/</id>
-    <published>2024-05-06T06:51:20.000Z</published>
-    <updated>2024-05-12T07:47:59.855Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1&gt;&lt;span id=&quot;computer-network&quot;&gt;Computer Network&lt;/span&gt;&lt;/h1&gt;&lt;h2&gt;&lt;span id=&quot;第一章-概述&quot;&gt;第一章 概述&lt;/span&gt;&lt;/h2&gt;&lt;h3&gt;&lt;span id=&quot;1-电路交换-分组交换和报文交换&quot;&gt;1.</summary>
-        
-      
-    
-    
-    
-    
-    <category term="408" scheme="http://nev8r.github.io/tags/408/"/>
-    
-    <category term="Network" scheme="http://nev8r.github.io/tags/Network/"/>
     
   </entry>
   
