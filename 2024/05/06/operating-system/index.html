@@ -5,15 +5,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="Operating System, Hexo">
-    <meta name="description" content="Operating System&amp;lt;&amp;lt; –toc– &amp;gt;&amp;gt;
-1. 计算机系统概述1.1. 操作系统的基本概念1.1.1. 操作系统的概念
-
-向上层提供方便易用的服务
+    <meta name="description" content="Operating System
 
 
-GUI 接口, 调用程序接口实现
+计算机系统概述
+操作系统的基本概念
+操作系统的发展与分类
+操作系统的运行环境
+操作系统结构
+操作系统引导
+虚拟机
 
-联机 命令接口">
+
+进程与线程
+进程与线程
+CPU 调度
+
+
+
+
+
+计算机系统概述操作系统的基本概念操作">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -60,9 +72,9 @@ GUI 接口, 调用程序接口实现
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 7.1.1">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
 </head>
 
 
@@ -445,8 +457,27 @@ GUI 接口, 调用程序接口实现
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Operating-System"><a href="#Operating-System" class="headerlink" title="Operating System"></a>Operating System</h1><p>&lt;&lt; –toc– &gt;&gt;</p>
-<h2 id="1-计算机系统概述"><a href="#1-计算机系统概述" class="headerlink" title="1. 计算机系统概述"></a>1. 计算机系统概述</h2><h3 id="1-1-操作系统的基本概念"><a href="#1-1-操作系统的基本概念" class="headerlink" title="1.1. 操作系统的基本概念"></a>1.1. 操作系统的基本概念</h3><h4 id="1-1-1-操作系统的概念"><a href="#1-1-1-操作系统的概念" class="headerlink" title="1.1.1. 操作系统的概念"></a>1.1.1. 操作系统的概念</h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
+                <h1><span id="operating-system">Operating System</span></h1><!-- toc -->
+
+<ul>
+<li><a href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0">计算机系统概述</a><ul>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5">操作系统的基本概念</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8F%91%E5%B1%95%E4%B8%8E%E5%88%86%E7%B1%BB">操作系统的发展与分类</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83">操作系统的运行环境</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84">操作系统结构</a></li>
+<li><a href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E5%AF%BC">操作系统引导</a></li>
+<li><a href="#%E8%99%9A%E6%8B%9F%E6%9C%BA">虚拟机</a></li>
+</ul>
+</li>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B">进程与线程</a><ul>
+<li><a href="#%E8%BF%9B%E7%A8%8B%E4%B8%8E%E7%BA%BF%E7%A8%8B-1">进程与线程</a></li>
+<li><a href="#cpu-%E8%B0%83%E5%BA%A6">CPU 调度</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2><span id="计算机系统概述">计算机系统概述</span></h2><h3><span id="操作系统的基本概念">操作系统的基本概念</span></h3><h4><span id="操作系统的概念">操作系统的概念</span></h4><img src="/2024/05/06/operating-system/image-20240507135101650.png" alt="操作系统的概念">
 <img src="/2024/05/06/operating-system/image-20240507135631673.png" alt="作为系统资源的管理者">
 向上层提供方便易用的服务
 
@@ -460,8 +491,8 @@ GUI 接口, 调用程序接口实现
 <li><p>程序接口 ：在程序中进行 <strong>系统调用</strong> 来使用程序接口。普通用户不可以直接使用，只能通过程序 <strong>间接</strong> 使用。（系统调用 == 广义指令）</p>
 </li>
 </ul>
-<p><strong>系统调用的目的是请求系统服务</strong><br><img src="/2024/05/06/operating-system/image-20240507142006282.png" alt="向上层提供方便易用的服务"><br><img src="/2024/05/06/operating-system/image-20240507173128360.png" alt="作为最接近硬件的层次"><br><img src="/2024/05/06/operating-system/image-20240507142235927.png" alt=""><br><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240507142309685.png" alt="本节回顾"></p>
-<h4 id="1-1-2-操作系统的四个特征"><a href="#1-1-2-操作系统的四个特征" class="headerlink" title="1.1.2. 操作系统的四个特征"></a>1.1.2. 操作系统的四个特征</h4><img src="/2024/05/06/operating-system/image-20240507143157625.png" alt="并发性">
+<p><strong>系统调用的目的是请求系统服务</strong><br><img src="/2024/05/06/operating-system/image-20240507142006282.png" alt="向上层提供方便易用的服务"><br><img src="/2024/05/06/operating-system/image-20240507173128360.png" alt="作为最接近硬件的层次"><br><img src="/2024/05/06/operating-system/image-20240507142235927.png" alt><br><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240507142309685.png" alt="本节回顾"></p>
+<h4><span id="操作系统的四个特征">操作系统的四个特征</span></h4><img src="/2024/05/06/operating-system/image-20240507143157625.png" alt="并发性">
 <img src="/2024/05/06/operating-system/image-20240507143324793.png" alt="共享性">
 
 <ul>
@@ -498,7 +529,7 @@ GUI 接口, 调用程序接口实现
 <li>并发性才会导致异步性</li>
 </ul>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240507144532608.png" alt="小节回顾"></p>
-<h3 id="1-2-操作系统的发展与分类"><a href="#1-2-操作系统的发展与分类" class="headerlink" title="1.2. 操作系统的发展与分类"></a>1.2. 操作系统的发展与分类</h3><img src="/2024/05/06/operating-system/image-20240507151223451.png" alt="OS的发展与分类">
+<h3><span id="操作系统的发展与分类">操作系统的发展与分类</span></h3><img src="/2024/05/06/operating-system/image-20240507151223451.png" alt="OS的发展与分类">
 <img src="/2024/05/06/operating-system/image-20240507153553538.png" alt="操作系统的发展历程">
 <img src="/2024/05/06/operating-system/image-20240507151606526.png" alt="手工操作阶段">
 <img src="/2024/05/06/operating-system/image-20240507152130416.png" alt="单道批处理系统">
@@ -508,14 +539,14 @@ GUI 接口, 调用程序接口实现
 <img src="/2024/05/06/operating-system/image-20240507152652339.png" alt="其他几种操作系统">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507152815828.png" alt="小节回顾">
 
-<h3 id="1-3-操作系统的运行环境"><a href="#1-3-操作系统的运行环境" class="headerlink" title="1.3. 操作系统的运行环境"></a>1.3. 操作系统的运行环境</h3><h4 id="1-3-1-操作系统运行机制"><a href="#1-3-1-操作系统运行机制" class="headerlink" title="1.3.1. 操作系统运行机制"></a>1.3.1. 操作系统运行机制</h4><img src="/2024/05/06/operating-system/image-20240507162338971.png" alt="操作系统的运行机制">
+<h3><span id="操作系统的运行环境">操作系统的运行环境</span></h3><h4><span id="操作系统运行机制">操作系统运行机制</span></h4><img src="/2024/05/06/operating-system/image-20240507162338971.png" alt="操作系统的运行机制">
 <img src="/2024/05/06/operating-system/image-20240507162727941.png" alt="内核程序和应用程序">
 <img src="/2024/05/06/operating-system/image-20240507162846800.png" alt="特权指令和非特权指令">
 <img src="/2024/05/06/operating-system/image-20240507163336783.png" alt="内核态和用户态">
 <img src="/2024/05/06/operating-system/image-20240507164040601.png" alt=" CPU状态切换">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507165534868.png" alt="小节回顾">
 
-<h4 id="1-3-2-中断和异常"><a href="#1-3-2-中断和异常" class="headerlink" title="1.3.2. 中断和异常"></a>1.3.2. 中断和异常</h4><img src="/2024/05/06/operating-system/image-20240507170042787.png" alt="中断和异常">
+<h4><span id="中断和异常">中断和异常</span></h4><img src="/2024/05/06/operating-system/image-20240507170042787.png" alt="中断和异常">
 <img src="/2024/05/06/operating-system/image-20240507170952913.png" alt="中断的作用">
 <img src="/2024/05/06/operating-system/image-20240507171202491.png" alt="内中断">
 <img src="/2024/05/06/operating-system/image-20240507171259502.png" alt="陷入指令">
@@ -526,7 +557,7 @@ GUI 接口, 调用程序接口实现
 <img src="/2024/05/06/operating-system/image-20240507172813984.png" alt="中断机制的基本原理">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507172904916.png" alt="小节回顾">
 
-<h4 id="1-3-3-系统调用"><a href="#1-3-3-系统调用" class="headerlink" title="1.3.3. 系统调用"></a>1.3.3. 系统调用</h4><img src="/2024/05/06/operating-system/image-20240507173258019.png" alt="系统调用">
+<h4><span id="系统调用">系统调用</span></h4><img src="/2024/05/06/operating-system/image-20240507173258019.png" alt="系统调用">
 <img src="/2024/05/06/operating-system/image-20240507173519052.png" alt="系统调用与库函数的区别">
 <img src="/2024/05/06/operating-system/image-20240507173743896.png" alt="为什么系统调用是必须的？">
  <img src="/2024/05/06/operating-system/image-20240507184857479.png" alt="系统调用的按功能分类">
@@ -540,7 +571,7 @@ GUI 接口, 调用程序接口实现
 <li>退出中断，恢复现场<img src="/2024/05/06/operating-system/image-20240507190258909.png" alt="库函数调用">
 **小节回顾** <img src="/2024/05/06/operating-system/image-20240507190428113.png" alt="小节回顾"></li>
 </ol>
-<h3 id="1-4-操作系统结构"><a href="#1-4-操作系统结构" class="headerlink" title="1.4. 操作系统结构"></a>1.4. 操作系统结构</h3><img src="/2024/05/06/operating-system/image-20240508162504976.png" alt="操作系统结构">
+<h3><span id="操作系统结构">操作系统结构</span></h3><img src="/2024/05/06/operating-system/image-20240508162504976.png" alt="操作系统结构">
 <img src="/2024/05/06/operating-system/image-20240508162702860.png" alt="计算机层次机构">
 <img src="/2024/05/06/operating-system/image-20240508162752980.png" alt="操作系统内核">
 <img src="/2024/05/06/operating-system/image-20240508162917145.png" alt="大内核和微内核"> 微内核的特点：
@@ -567,7 +598,7 @@ GUI 接口, 调用程序接口实现
 <p>外核</p>
 <img src="/2024/05/06/operating-system/image-20240508211549916.png" alt="外核">
 
-<h3 id="1-5-操作系统引导"><a href="#1-5-操作系统引导" class="headerlink" title="1.5. 操作系统引导"></a>1.5. 操作系统引导</h3><img src="/2024/05/06/operating-system/image-20240508220337850.png" alt="操作系统引导">
+<h3><span id="操作系统引导">操作系统引导</span></h3><img src="/2024/05/06/operating-system/image-20240508220337850.png" alt="操作系统引导">
 
 <ol>
 <li>激活 CPU。读取 rom 中的 boot 程序，指令寄存器读入 bios 第一条指令，开始执行 bios 的指令。</li>
@@ -579,7 +610,7 @@ GUI 接口, 调用程序接口实现
 <li>加载加载启动管理器。</li>
 <li>加载操作系统。</li>
 </ol>
-<h3 id="1-6-虚拟机"><a href="#1-6-虚拟机" class="headerlink" title="1.6. 虚拟机"></a>1.6. 虚拟机</h3><p>利用虚拟化技术将物理机虚拟化为多台虚拟机，每台虚拟机独立运行操作系统</p>
+<h3><span id="虚拟机">虚拟机</span></h3><p>利用虚拟化技术将物理机虚拟化为多台虚拟机，每台虚拟机独立运行操作系统</p>
  <img src="/2024/05/06/operating-system/image-20240509161550073.png" alt="虚拟机管理程序">
 
 <ul>
@@ -600,13 +631,13 @@ GUI 接口, 调用程序接口实现
 <li><p>对比</p>
 <img src="/2024/05/06/operating-system/image-20240509162220863.png" alt="两类虚拟机管理器对比"></li>
 </ul>
-<h2 id="2-进程与线程"><a href="#2-进程与线程" class="headerlink" title="2. 进程与线程"></a>2. 进程与线程</h2><h3 id="2-1-进程与线程"><a href="#2-1-进程与线程" class="headerlink" title="2.1. 进程与线程"></a>2.1. 进程与线程</h3><h4 id="2-1-1-进程的概念与特征"><a href="#2-1-1-进程的概念与特征" class="headerlink" title="2.1.1. 进程的概念与特征"></a>2.1.1. 进程的概念与特征</h4><h5 id="2-1-1-1-进程的概念"><a href="#2-1-1-1-进程的概念" class="headerlink" title="2.1.1.1. 进程的概念"></a>2.1.1.1. 进程的概念</h5><p><strong>进程</strong>：动态的，正在执行的，程序的一次执行</p>
+<h2><span id="进程与线程">进程与线程</span></h2><h3><span id="进程与线程">进程与线程</span></h3><h4><span id="进程的概念与特征">进程的概念与特征</span></h4><h5><span id="进程的概念">进程的概念</span></h5><p><strong>进程</strong>：动态的，正在执行的，程序的一次执行</p>
 <p><strong>PID</strong>: 进程 id，进程的身份证号。唯一的，不重复的。</p>
 <p><strong>UID</strong>: 进程所属的用户 id。</p>
 <p><strong>PCB</strong>：进程控制块 <img src="/2024/05/06/operating-system/image-20240509173116456.png"></p>
 <img src="/2024/05/06/operating-system/image-20240509173212080.png" alt="PCB组成">
 
-<h5 id="2-1-1-2-进程的特征"><a href="#2-1-1-2-进程的特征" class="headerlink" title="2.1.1.2. 进程的特征"></a>2.1.1.2. 进程的特征</h5><img src="/2024/05/06/operating-system/image-20240509185949192.png" alt="进程的特征">
+<h5><span id="进程的特征">进程的特征</span></h5><img src="/2024/05/06/operating-system/image-20240509185949192.png" alt="进程的特征">
 
 <blockquote>
 <ul>
@@ -614,7 +645,7 @@ GUI 接口, 调用程序接口实现
 <li>程序封闭性是指进程执行的结果只取决于进程本身。失去封闭性之后，不同速度下执行结果不同。</li>
 </ul>
 </blockquote>
-<h4 id="2-1-2-进程的组成"><a href="#2-1-2-进程的组成" class="headerlink" title="2.1.2. 进程的组成"></a>2.1.2. 进程的组成</h4><p>一个程序开始运行前，创建对应进程和 PCB。</p>
+<h4><span id="进程的组成">进程的组成</span></h4><p>一个程序开始运行前，创建对应进程和 PCB。</p>
 <p>一个进程的实体由 <strong>PCB、程序段、数据段</strong> 组成。</p>
 <p>进程是动态的，进程实体是静态的。</p>
 <blockquote>
@@ -628,7 +659,7 @@ GUI 接口, 调用程序接口实现
 
 
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240509190019403.png" alt="小节回顾"></p>
-<h4 id="2-1-3-进程的状态和转换"><a href="#2-1-3-进程的状态和转换" class="headerlink" title="2.1.3. 进程的状态和转换"></a>2.1.3. 进程的状态和转换</h4><h5 id="2-1-3-1-进程的状态"><a href="#2-1-3-1-进程的状态" class="headerlink" title="2.1.3.1. 进程的状态"></a>2.1.3.1. 进程的状态</h5><img src="/2024/05/06/operating-system/image-20240510155944466.png" alt="进程的状态">
+<h4><span id="进程的状态和转换">进程的状态和转换</span></h4><h5><span id="进程的状态">进程的状态</span></h5><img src="/2024/05/06/operating-system/image-20240510155944466.png" alt="进程的状态">
 
 <ol>
 <li>运行态，进程在 CPU 上运行。</li>
@@ -651,7 +682,7 @@ GUI 接口, 调用程序接口实现
 
 
 
-<h5 id="2-1-3-2-进程的转换"><a href="#2-1-3-2-进程的转换" class="headerlink" title="2.1.3.2. 进程的转换"></a>2.1.3.2. 进程的转换</h5><img src="/2024/05/06/operating-system/image-20240510155816525.png" alt="进程的转换">
+<h5><span id="进程的转换">进程的转换</span></h5><img src="/2024/05/06/operating-system/image-20240510155816525.png" alt="进程的转换">
 
 <blockquote>
 <ul>
@@ -659,7 +690,7 @@ GUI 接口, 调用程序接口实现
 <li>可能出现死锁的状态，全部进程处于阻塞态。</li>
 </ul>
 </blockquote>
-<h5 id="2-1-3-3-进程的组织"><a href="#2-1-3-3-进程的组织" class="headerlink" title="2.1.3.3. 进程的组织"></a>2.1.3.3. 进程的组织</h5><img src="/2024/05/06/operating-system/image-20240510160520637.png" alt="进程的组织方式">
+<h5><span id="进程的组织">进程的组织</span></h5><img src="/2024/05/06/operating-system/image-20240510160520637.png" alt="进程的组织方式">
 
 <ol>
 <li><p>链式方式 <img src="/2024/05/06/operating-system/image-20240510160347090.png" alt="链式方式"></p>
@@ -668,7 +699,7 @@ GUI 接口, 调用程序接口实现
 </li>
 </ol>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240510160606331.png" alt="小节回顾"></p>
-<h4 id="2-1-4-进程的控制"><a href="#2-1-4-进程的控制" class="headerlink" title="2.1.4. 进程的控制"></a>2.1.4. 进程的控制</h4><h5 id="2-1-4-1-基本概念"><a href="#2-1-4-1-基本概念" class="headerlink" title="2.1.4.1. 基本概念"></a>2.1.4.1. 基本概念</h5><img src="/2024/05/06/operating-system/image-20240510160918707.png" alt="进程的控制">
+<h4><span id="进程的控制">进程的控制</span></h4><h5><span id="基本概念">基本概念</span></h5><img src="/2024/05/06/operating-system/image-20240510160918707.png" alt="进程的控制">
 
 <ol>
 <li>基本概念<ol>
@@ -690,7 +721,7 @@ GUI 接口, 调用程序接口实现
 </ol>
 </li>
 </ol>
-<h5 id="2-1-4-2-进程控制相关原语"><a href="#2-1-4-2-进程控制相关原语" class="headerlink" title="2.1.4.2. 进程控制相关原语"></a>2.1.4.2. 进程控制相关原语</h5><ul>
+<h5><span id="进程控制相关原语">进程控制相关原语</span></h5><ul>
 <li>进程的创建 <img src="/2024/05/06/operating-system/image-20240510162622967.png" alt="进程的创建"></li>
 <li>撤销原语 <img src="/2024/05/06/operating-system/image-20240510163108621.png" alt="进程的撤销"></li>
 <li>进程的阻塞和唤醒 <img src="/2024/05/06/operating-system/image-20240510163320264.png" alt="进程的阻塞和唤醒"></li>
@@ -700,14 +731,14 @@ GUI 接口, 调用程序接口实现
 </li>
 </ul>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240510164355234.png" alt="小节回顾"></p>
-<h4 id="2-1-5-进程的通信（IPC"><a href="#2-1-5-进程的通信（IPC" class="headerlink" title="2.1.5. 进程的通信（IPC)"></a>2.1.5. 进程的通信（IPC)</h4><ul>
+<h4><span id="进程的通信ipc">进程的通信（IPC)</span></h4><ul>
 <li>进程的通信(IPC) 是指进程之间的信息交换。</li>
 <li>进程的通信需要操作系统的支持<ul>
 <li>进程是分配系统资源的单位，各进程拥有的内存地址空间相互独立。</li>
 </ul>
 </li>
 </ul>
-<h5 id="2-1-5-1-进程的通信方式"><a href="#2-1-5-1-进程的通信方式" class="headerlink" title="2.1.5.1. 进程的通信方式"></a>2.1.5.1. 进程的通信方式</h5><ol>
+<h5><span id="进程的通信方式">进程的通信方式</span></h5><ol>
 <li><strong>共享内存</strong><ol>
 <li>进程中有一片可以直接访问的共享空间。</li>
 <li>低级共享方式：基于数据结构的共享。访问慢，特殊的全局变量，可供所有进程访问。低灵活性。</li>
@@ -750,7 +781,7 @@ GUI 接口, 调用程序接口实现
 </ul>
 </blockquote>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240510172250107.png" alt="小节回顾"></p>
-<h4 id="2-1-6-线程和多线程模型"><a href="#2-1-6-线程和多线程模型" class="headerlink" title="2.1.6. 线程和多线程模型"></a>2.1.6. 线程和多线程模型</h4><h5 id="2-1-6-1-线程的基本概念-线程与进程的比较"><a href="#2-1-6-1-线程的基本概念-线程与进程的比较" class="headerlink" title="2.1.6.1. 线程的基本概念&amp;&amp;线程与进程的比较"></a>2.1.6.1. 线程的基本概念&amp;&amp;线程与进程的比较</h5><ol>
+<h4><span id="线程和多线程模型">线程和多线程模型</span></h4><h5><span id="线程的基本概念ampamp线程与进程的比较">线程的基本概念&amp;&amp;线程与进程的比较</span></h5><ol>
 <li><p>线程是 <strong>轻量级进程</strong>，CPU 调度的单位。</p>
 </li>
 <li><p>引入线程的目的是更好地使 <strong>多道程序并发执行</strong>。有的进程需要“同时”做很多事，而传统的进程只能串行执行一系列程序。</p>
@@ -770,9 +801,9 @@ GUI 接口, 调用程序接口实现
 </ol>
 <img src="/2024/05/06/operating-system/image-20240510182820150.png" alt="引入线程后的变化">
 
-<h5 id="2-1-6-2-线程的属性"><a href="#2-1-6-2-线程的属性" class="headerlink" title="2.1.6.2. 线程的属性"></a>2.1.6.2. 线程的属性</h5><img src="/2024/05/06/operating-system/image-20240510183553446.png" alt="线程的属性">
+<h5><span id="线程的属性">线程的属性</span></h5><img src="/2024/05/06/operating-system/image-20240510183553446.png" alt="线程的属性">
 
-<h5 id="2-1-6-3-线程的实现方式"><a href="#2-1-6-3-线程的实现方式" class="headerlink" title="2.1.6.3. 线程的实现方式"></a>2.1.6.3. 线程的实现方式</h5><ol>
+<h5><span id="线程的实现方式">线程的实现方式</span></h5><ol>
 <li><p><strong>用户级线程</strong> <img src="/2024/05/06/operating-system/image-20240510190608556.png" alt="用户级别线程" style="zoom: 33%;"></p>
 <ol>
 <li>线程库实现，早期操作系统不支持线程。</li>
@@ -814,7 +845,7 @@ GUI 接口, 调用程序接口实现
 <li><p><strong>组合方式</strong></p>
 </li>
 </ol>
-<h5 id="2-1-6-4-多线程模型"><a href="#2-1-6-4-多线程模型" class="headerlink" title="2.1.6.4. 多线程模型"></a>2.1.6.4. 多线程模型</h5><ol>
+<h5><span id="多线程模型">多线程模型</span></h5><ol>
 <li><p><strong>一对一模式</strong> <img src="/2024/05/06/operating-system/image-20240510192530025.png" alt="一对一模型" style="zoom:33%;"></p>
 <ol>
 <li>一个用户级线程映射到一个内核级别线程。</li>
@@ -852,14 +883,14 @@ GUI 接口, 调用程序接口实现
 
 
 
-<h5 id="2-1-6-5-线程的状态与转换"><a href="#2-1-6-5-线程的状态与转换" class="headerlink" title="2.1.6.5. 线程的状态与转换"></a>2.1.6.5. 线程的状态与转换</h5><img src="/2024/05/06/operating-system/image-20240510205020400.png" alt="线程的状态与转换" style="zoom:50%;">
+<h5><span id="线程的状态与转换">线程的状态与转换</span></h5><img src="/2024/05/06/operating-system/image-20240510205020400.png" alt="线程的状态与转换" style="zoom:50%;">
 
 
 
-<h5 id="2-1-6-6-线程的组织与控制"><a href="#2-1-6-6-线程的组织与控制" class="headerlink" title="2.1.6.6. 线程的组织与控制"></a>2.1.6.6. 线程的组织与控制</h5><p><strong>线程控制块</strong> <img src="/2024/05/06/operating-system/image-20240510214328419.png" alt="线程控制块" style="zoom:50%;"></p>
+<h5><span id="线程的组织与控制">线程的组织与控制</span></h5><p><strong>线程控制块</strong> <img src="/2024/05/06/operating-system/image-20240510214328419.png" alt="线程控制块" style="zoom:50%;"></p>
 <p><strong>线程表</strong> <img src="/2024/05/06/operating-system/image-20240510214417465.png" alt="线程表" style="zoom:33%;"></p>
-<h3 id="CPU-调度"><a href="#CPU-调度" class="headerlink" title="CPU 调度"></a>CPU 调度</h3><h4 id="调度的概念"><a href="#调度的概念" class="headerlink" title="调度的概念"></a>调度的概念</h4><h5 id="调度的基本概念"><a href="#调度的基本概念" class="headerlink" title="调度的基本概念"></a>调度的基本概念</h5><p><strong>CPU 调度</strong>：CPU 的调度是对 CPU 的分配，从就绪队列中按照一定的算法选择一个进程上 CPU 执行。</p>
-<h5 id="调度的层次"><a href="#调度的层次" class="headerlink" title="调度的层次"></a>调度的层次</h5><ol>
+<h3><span id="cpu-调度">CPU 调度</span></h3><h4><span id="调度的概念">调度的概念</span></h4><h5><span id="调度的基本概念">调度的基本概念</span></h5><p><strong>CPU 调度</strong>：CPU 的调度是对 CPU 的分配，从就绪队列中按照一定的算法选择一个进程上 CPU 执行。</p>
+<h5><span id="调度的层次">调度的层次</span></h5><ol>
 <li><strong>高级调度（作业调度）</strong> <img src="/2024/05/06/operating-system/image-20240511163147576.png" alt="作业调度" style="zoom:67%;"><ol>
 <li><strong>作业的概念</strong>：一个具体的任务。用户向操作系统提交一个任务约等于用户让操作系统启动一个程序。</li>
 <li>简化理解：好几个程序需要启动，到底启动哪一个。</li>
@@ -882,7 +913,7 @@ GUI 接口, 调用程序接口实现
 </li>
 <li><strong>三种调度的联系和对比</strong> <img src="/2024/05/06/operating-system/image-20240511164623661.png" alt="三种调度的联系和对比"></li>
 </ol>
-<h5 id="小节回顾"><a href="#小节回顾" class="headerlink" title="小节回顾 "></a>小节回顾 <img src="/2024/05/06/operating-system/image-20240511164753901.png" alt="小节回顾"></h5><h4 id="调度的实现"><a href="#调度的实现" class="headerlink" title="调度的实现"></a>调度的实现</h4><h5 id="进程调度的时机、切换和过程"><a href="#进程调度的时机、切换和过程" class="headerlink" title="进程调度的时机、切换和过程"></a>进程调度的时机、切换和过程</h5><p><strong>进程调度的时机</strong></p>
+<h5><span id="小节回顾">小节回顾 <img src="/2024/05/06/operating-system/image-20240511164753901.png" alt="小节回顾"></span></h5><h4><span id="调度的实现">调度的实现</span></h4><h5><span id="进程调度的时机-切换和过程">进程调度的时机、切换和过程</span></h5><p><strong>进程调度的时机</strong></p>
 <ol>
 <li>需要进程调度与切换的情况<ol>
 <li>当前进程 <strong>主动放弃</strong> 处理机<ol>
@@ -931,7 +962,7 @@ GUI 接口, 调用程序接口实现
 <blockquote>
 <p>注意: 进程切换是有代价的，因此如果过于频繁的进行进程调度、切换，必然会使整个系统的效率降低，使系统大部分时间都花在了进程切换上，而真正用于执行进程的时间减少。</p>
 </blockquote>
-<h5 id="进程调度的方式"><a href="#进程调度的方式" class="headerlink" title="进程调度的方式"></a>进程调度的方式</h5><ol>
+<h5><span id="进程调度的方式">进程调度的方式</span></h5><ol>
 <li>非剥夺调度方式（非抢占式）只允许进程主动放弃处理机。<ol>
 <li>实现简单，系统管理开销小</li>
 <li>无法处理紧急任务，适合早期批处理器</li>
@@ -953,17 +984,17 @@ GUI 接口, 调用程序接口实现
 
 
 
-<h5 id="调度器"><a href="#调度器" class="headerlink" title="调度器"></a>调度器</h5><img src="/2024/05/06/operating-system/image-20240511191620254.png" alt="调度程序触发时机" style="zoom:67%;">
+<h5><span id="调度器">调度器</span></h5><img src="/2024/05/06/operating-system/image-20240511191620254.png" alt="调度程序触发时机" style="zoom:67%;">
 
 <blockquote>
 <p>不支持内核级线程的操作系统，调度程序的处理对象是进程<br>支持内核级线程的操作系统，调度程序的处理对象是内核线程</p>
 </blockquote>
-<h5 id="闲逛进程"><a href="#闲逛进程" class="headerlink" title="闲逛进程"></a>闲逛进程</h5><ul>
+<h5><span id="闲逛进程">闲逛进程</span></h5><ul>
 <li>优先级最低</li>
 <li>能耗低</li>
 <li>0 地址指令，占一个完整的指令周期</li>
 </ul>
-<h4 id="调度的目标（评价指标）"><a href="#调度的目标（评价指标）" class="headerlink" title="调度的目标（评价指标）"></a>调度的目标（评价指标）</h4><ol>
+<h4><span id="调度的目标评价指标">调度的目标（评价指标）</span></h4><ol>
 <li><p><strong>CPU 利用率</strong>: 指 CPU 处与忙率的时间占总时间的比例<br>$$<br>CPU 利用率 = \frac{CPU 有效工作时间}{CPU 有效工作时间 + CPU 空闲等待时间}<br>$$</p>
 </li>
 <li><p><strong>系统吞吐量</strong>: 单位时间内完成是作业数量<br>$$<br>系统吞吐量 = \frac{总共完成了多少道作业}{总共花了多少时间}<br>$$</p>
@@ -1000,7 +1031,7 @@ GUI 接口, 调用程序接口实现
 </li>
 </ol>
 <p><strong>小节回顾</strong> <img src="/2024/05/06/operating-system/image-20240511195435454.png" alt="小节回顾" style="zoom:80%;"></p>
-<h4 id="调度算法"><a href="#调度算法" class="headerlink" title="调度算法"></a>调度算法</h4><h5 id="先来先服务（FCFS）"><a href="#先来先服务（FCFS）" class="headerlink" title="先来先服务（FCFS）"></a>先来先服务（FCFS）</h5><ol>
+<h4><span id="调度算法">调度算法</span></h4><h5><span id="先来先服务fcfs">先来先服务（FCFS）</span></h5><ol>
 <li>算法思想：从”公平“的角度的考虑，谁先来先给谁服务</li>
 <li>算法规则：按照作业/进程到达的先后顺序进行服务</li>
 <li>调度：<ol>
@@ -1016,7 +1047,7 @@ GUI 接口, 调用程序接口实现
 </li>
 <li>是否导饥饿   <strong>不会导致饥饿</strong></li>
 </ol>
-<h5 id="短作业优先"><a href="#短作业优先" class="headerlink" title="短作业优先"></a>短作业优先</h5><ol>
+<h5><span id="短作业优先">短作业优先</span></h5><ol>
 <li>算法思想：追求最少的平均等待时间，最少的平均周转时间、最少的平均平均带权周转时间</li>
 <li>算法规则：最短的作业/进程优先得到服务(所谓“最短”，是指要求服务时间最短)</li>
 <li>调度：<ol>
@@ -1034,7 +1065,7 @@ GUI 接口, 调用程序接口实现
 <li>缺点: 不公平。<strong>对短作业有利，对长作业不利</strong>。可能产生 <strong>饥饿现象</strong>。另外，作业/进程的运行时间是由用户提供的，并不一定真实，不一定能做到真正的短作业优先</li>
 </ol>
 </li>
-<li>是否导饥饿   如果源源不断地有短作业/进程到来，可能使长作业/进程长时间得不到服务，产生“<strong>饥饿”</strong> 现象。如果一直得不到服务，则称为**“饿死 “ **</li>
+<li>是否导饥饿   如果源源不断地有短作业/进程到来，可能使长作业/进程长时间得不到服务，产生“<strong>饥饿”</strong> 现象。如果一直得不到服务，则称为<strong>“饿死 “</strong></li>
 </ol>
 <blockquote>
 <p>注意几个小细节:</p>
@@ -1049,7 +1080,7 @@ GUI 接口, 调用程序接口实现
 </li>
 </ol>
 </blockquote>
-<h5 id="高响应比优先"><a href="#高响应比优先" class="headerlink" title="高响应比优先 "></a>高响应比优先 <img src="/2024/05/06/operating-system/image-20240511203748966.png" alt="HRRN" style="zoom: 33%;"></h5><ol>
+<h5><span id="高响应比优先">高响应比优先 <img src="/2024/05/06/operating-system/image-20240511203748966.png" alt="HRRN" style="zoom: 33%;"></span></h5><ol>
 <li><p>算法思想：要综合考虑作业/进程的等待时间和要求服务的时间</p>
 </li>
 <li><p>算法规则：在每次调度时先计算各个作业/进程的 <strong>响应比</strong>，选择 <strong>响应比最高</strong> 的作业/进程为其服务<br>$$<br>响应比 = \frac{等待时间 + 要求服务时间}{要求服务时间} &gt; 1<br>$$</p>
@@ -1063,22 +1094,24 @@ GUI 接口, 调用程序接口实现
 <li><p>是否导饥饿   <strong>不会导致饥饿</strong></p>
 </li>
 </ol>
-<h5 id="对比"><a href="#对比" class="headerlink" title="对比"></a>对比</h5><img src="/2024/05/06/operating-system/image-20240511204452770.png" alt="对比" style="zoom: 50%;">
-
-<h5 id="时间片轮转调度"><a href="#时间片轮转调度" class="headerlink" title="时间片轮转调度"></a>时间片轮转调度</h5><ol>
+<h5><span id="对比1">对比1</span></h5><p><img src="/2024/05/06/operating-system/image-20240511204452770.png" alt="对比" style="zoom: 50%;">&gt; </p>
+<blockquote>
+<p>这三种算法一般使用于<span style="color:#FF0000;">早期的批处理系统</span></p>
+</blockquote>
+<h5><span id="时间片轮转调度">时间片轮转调度</span></h5><ol>
 <li><p>算法思想：公平地、轮流地为各个进程服务，让每个进程在一定时间间隔内都可以得到响应</p>
 </li>
-<li><p>算法规则：按照各进程到达就绪队列的顺序，轮流让各个进程执行一个<strong>时间片</strong>(如100ms)。若进程未在一个时间片内执行完则剥夺处理机，将进程重新放到就绪队列队尾重新排队。</p>
+<li><p>算法规则：按照各进程到达就绪队列的顺序，轮流让各个进程执行一个 <strong>时间片</strong>(如 100ms)。若进程未在一个时间片内执行完则剥夺处理机，将进程重新放到就绪队列队尾重新排队。</p>
 </li>
 <li><p>用于作业/进程调度： 用于进程调度(只有作业放入内存建立了相应的进程后，才能被分配处理机时间片)</p>
 </li>
 <li><p>是否可抢占? </p>
-<p>若进程未能在时间片内运行完，将被强行剥夺处理机使用权，因此时间片轮转调度算法属于<strong>抢占式</strong>的算法。由时钟装置发出<strong>时钟中断</strong>来通知CPU时间片已到</p>
+<p>若进程未能在时间片内运行完，将被强行剥夺处理机使用权，因此时间片轮转调度算法属于 <strong>抢占式</strong> 的算法。由时钟装置发出 <strong>时钟中断</strong> 来通知 CPU 时间片已到</p>
 </li>
 <li><p>优缺点</p>
 <ol>
-<li>优点:公平;响应快，适用于分时操作系统:</li>
-<li>缺点:由于高频率的进程切换，因此有一定开销;不区分任务的紧急程度。</li>
+<li>优点: 公平; 响应快，适用于分时操作系统:</li>
+<li>缺点: 由于高频率的进程切换，因此有一定开销; 不区分任务的紧急程度。</li>
 </ol>
 </li>
 <li><p>是否会导致饥饿   不会</p>
@@ -1086,10 +1119,83 @@ GUI 接口, 调用程序接口实现
 </ol>
 <blockquote>
 <ul>
-<li>如果<strong>时间片太大</strong>，使得每个进程都可以在一个时间片内就完成，则时间片轮转调度算法<strong>退化为先来先服务调度算法</strong>并且会<strong>增大进程响应时间</strong>。因此时间片不能太大。</li>
-<li>另一方面，进程调度、切换是有时间代价的(保存、恢复运行环境)，因此<strong>如果时间片太小</strong>，会导致<strong>进程切换过于频繁</strong>，系统会花大量的时间来处理进程切换，从而导致实际用于进程执行的时间比例减少。可见时间片也不能太小。</li>
+<li>如果 <strong>时间片太大</strong>，使得每个进程都可以在一个时间片内就完成，则时间片轮转调度算法 <strong>退化为先来先服务调度算法</strong> 并且会 <strong>增大进程响应时间</strong>。因此时间片不能太大。</li>
+<li>另一方面，进程调度、切换是有时间代价的(保存、恢复运行环境)，因此 <strong>如果时间片太小</strong>，会导致 <strong>进程切换过于频繁</strong>，系统会花大量的时间来处理进程切换，从而导致实际用于进程执行的时间比例减少。可见时间片也不能太小。</li>
 </ul>
 </blockquote>
+<h5><span id="优先级调度算法">优先级调度算法</span></h5><ol>
+<li><p>算法思想：随着计算机的发展，特别是实时操作系统的出现，越来越多的应用场景需要根据任务的紧急程度来决定处理顺序</p>
+</li>
+<li><p>算法规则：每个作业/进程有各自的优先级，调度时选择优先级最高的作业/进程</p>
+</li>
+<li><p>用于作业/进程调度：既可用于作业调度，也可用于进程调度。甚至，还会用于在之后会学习的 I/0 调度中</p>
+</li>
+<li><p>是否可抢占? </p>
+<ol>
+<li>抢占式、非抢占式都有。做题时的区别在于: 非抢占式只需在进程主动放弃处理机时进行调度即可，而抢占式还需在就绪队列变化时，检查是否会发生抢占。</li>
+<li>非抢占式 <img src="/2024/05/06/operating-system/image-20240512132723954.png" alt="非抢占式" style="zoom:50%;"></li>
+<li>抢占式 <img src="/2024/05/06/operating-system/image-20240512132756016.png" alt="抢占式" style="zoom:50%;"></li>
+</ol>
+</li>
+<li><p>优缺点</p>
+<ol>
+<li>优点: 用优先级区分紧急程度、重要程度，适用于实时操作系统。可灵活地调整对各种作业/进程的偏好程度。</li>
+<li>缺点: 若源源不断地有高优先级进程到来，则可能导致饥饿</li>
+</ol>
+</li>
+<li><p>是否会导致饥饿   会</p>
+</li>
+<li><p>设置优先级别的原则</p>
+<ol>
+<li>动态优先级<ol>
+<li>可以从追求公平、提升资源利用率等角度考虑</li>
+<li>如果某进程在就绪队列中等待了很长时间，则可以适当提升其优先级</li>
+<li>如果某进程占用处理机运行了很长时间，则可适当降低其优先级</li>
+<li>如果发现一个进程频繁进行 IO 操作，可以提高其优先级</li>
+</ol>
+</li>
+<li>静态优先级</li>
+<li>系统进程优先级高于后台进程</li>
+<li>前台进程优先级高于后台进程</li>
+<li>操作系统更偏好 IO 型进程（IO 繁忙型进程），与之相对的是计算型进程（CPU 繁忙进程）</li>
+</ol>
+</li>
+</ol>
+<h5><span id="多级反馈队列调度算法">多级反馈队列调度算法</span></h5><ol>
+<li><p>算法思想：对其他调度算法的折中权衡</p>
+</li>
+<li><p>算法规则：</p>
+<ol>
+<li>设置多级就绪队列，各级队列优先级从高到低，时间片从小到大</li>
+<li>新进程到达时先进入第 1 级队列，按 FCFS 原则排队等待被分配时 2 间片，若用完时间片进程还未结束，则进程进入下一级队列队尾如果此时已经是在最下级的队列，则重新放回该队列队尾</li>
+<li>只有第 k 级队列为空时，才会为 k+1 级队头的进程分配时间片<br>用于进程调度</li>
+</ol>
+</li>
+<li><p>用于作业/进程调度：用于进程调度</p>
+</li>
+<li><p>是否可抢占? </p>
+<p><span style="color:#FF0000;"> 抢占式 </span> 的算法。在 k 级队列的进程运行过程中，若更上级的队列(1~k-1 级)中进入了一个新进程，则由于新进程处于优先级更高的队列中，因此新进程会抢占处理机，原来运行的进程放回 k 级队列队尾。</p>
+</li>
+<li><p>优点</p>
+<ol>
+<li>对各类型进程相对公平(FCFS 的优点):</li>
+<li>每个新到达的进程都可以很快就得到响应(RR 的优点);</li>
+<li>短进程只用较少的时间就可完成(SPF 的优点);</li>
+<li>不必实现估计进程的运行时间(避免用户作假)</li>
+<li>可灵活地调整对各类进程的偏好程度，比如 CPU 密集型进程、I/0 密集型进程(拓展: 可以将因 I/0 而阻塞的进程重新放回原队列，这样 I/O 型进程就可以保持较高优先级)</li>
+</ol>
+</li>
+<li><p>是否会导致饥饿   会</p>
+</li>
+<li><p>例子：<img src="/2024/05/06/operating-system/image-20240512134717964.png" alt="多级反馈队列调度"></p>
+</li>
+</ol>
+<h5><span id="对比2">对比2</span></h5><img src="/2024/05/06/operating-system/image-20240512135952420.png" alt="对比" style="zoom:50%;">
+
+<blockquote>
+<p>这几种算法适合用于<span style="color:#FF0000;">交互式系统</span>。</p>
+</blockquote>
+<h5><span id="多级对列调度算法">多级对列调度算法</span></h5><img src="/2024/05/06/operating-system/image-20240512140735003.png" alt="多级对列调度算法" style="zoom:50%;">
 
                 
             </div>
