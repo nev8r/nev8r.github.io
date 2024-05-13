@@ -441,7 +441,11 @@
 </li>
 <li><strong>三种调度的联系和对比</strong> <img src="/2024/05/06/operating-system/image-20240511164623661.png" alt="三种调度的联系和对比"></li>
 </ol>
-<h5 id="小节回顾"><a href="#小节回顾" class="headerlink" title="小节回顾 "></a>小节回顾 <img src="/2024/05/06/operating-system/image-20240511164753901.png" alt="小节回顾"></h5><h4 id="调度的实现"><a href="#调度的实现" class="headerlink" title="调度的实现"></a>调度的实现</h4><h5 id="进程调度的时机、切换和过程"><a href="#进程调度的时机、切换和过程" class="headerlink" title="进程调度的时机、切换和过程"></a>进程调度的时机、切换和过程</h5><h6 id="进程调度的时机"><a href="#进程调度的时机" class="headerlink" title="进程调度的时机"></a>进程调度的时机</h6><ol>
+<img src="/2024/05/06/operating-system/image-20240511164753901.png" alt="小节回顾">
+
+
+
+<h4 id="调度的实现"><a href="#调度的实现" class="headerlink" title="调度的实现"></a>调度的实现</h4><h5 id="进程调度的时机、切换和过程"><a href="#进程调度的时机、切换和过程" class="headerlink" title="进程调度的时机、切换和过程"></a>进程调度的时机、切换和过程</h5><h6 id="进程调度的时机"><a href="#进程调度的时机" class="headerlink" title="进程调度的时机"></a>进程调度的时机</h6><ol>
 <li>需要进程调度与切换的情况<ol>
 <li>当前进程 <strong>主动放弃</strong> 处理机<ol>
 <li>进程正常终止</li>
@@ -622,7 +626,7 @@
 <li><p>是否导饥饿   <strong>不会导致饥饿</strong></p>
 </li>
 </ol>
-<h5 id="对比-1"><a href="#对比-1" class="headerlink" title="对比 1"></a>对比 1</h5><p><img src="/2024/05/06/operating-system/image-20240511204452770.png" alt="对比" style="zoom: 50%;"> &gt; </p>
+<p><img src="/2024/05/06/operating-system/image-20240511204452770.png" alt="对比" style="zoom: 50%;"> &gt; </p>
 <blockquote>
 <p>这三种算法一般使用于 <span style="color:#FF0000;"> 早期的批处理系统 </span></p>
 </blockquote>
@@ -721,7 +725,7 @@
 <li><p>例子：<img src="/2024/05/06/operating-system/image-20240512134717964.png" alt="多级反馈队列调度"></p>
 </li>
 </ol>
-<h5 id="对比-2"><a href="#对比-2" class="headerlink" title="对比 2"></a>对比 2</h5><img src="/2024/05/06/operating-system/image-20240512135952420.png" alt="对比" style="zoom:50%;">
+<img src="/2024/05/06/operating-system/image-20240512135952420.png" alt="对比" style="zoom:50%;">
 
 <blockquote>
 <p>这几种算法适合用于 <span style="color:#FF0000;"> 交互式系统 </span>。</p>
@@ -869,51 +873,169 @@ remainder section<span class="token punctuation">;</span>    <span class="token 
 
 
 
+<h5 id="信号量实现进程互斥"><a href="#信号量实现进程互斥" class="headerlink" title="信号量实现进程互斥"></a>信号量实现进程互斥</h5><img src="/2024/05/06/operating-system/image-20240513123811077.png" alt="信号量实现进程互斥" style="zoom:50%;">
+
+<ol>
+<li>分析并发活动，划定临界区</li>
+<li>设置 <span style="color:#FF0000;"> 互斥信号量 </span> mutex，<span style="color:#FF0000;"> 初值为 1 </span></li>
+<li>进入区 P(mutex) –  申请资源</li>
+<li>退出区 V(mutex) – 释放资源</li>
+</ol>
+<blockquote>
+<ul>
+<li>不同临界资源设置不同的互斥信号量</li>
+<li><span style="color:#FF0000;"> P, V 操作必须成对出现。</span></li>
+</ul>
+</blockquote>
+<h5 id="信号量实现进程同步"><a href="#信号量实现进程同步" class="headerlink" title="信号量实现进程同步"></a>信号量实现进程同步</h5><ul>
+<li><p>进程同步：让各并发进程有序地推进</p>
+<img src="/2024/05/06/operating-system/image-20240513124512790.png" alt="信号量实现进程同步" style="zoom:50%;"></li>
+</ul>
+<ol>
+<li>分析什么地方需要进程同步，<span style="color:#FF0000;"> 一前一后 </span></li>
+<li>设置同步 <span style="color:#FF0000;"> 信号量 S，初始为 0 </span></li>
+<li>在 <span style="color:#FF0000;"> 前操作之前执行 V(S)</span></li>
+<li>在 <span style="color:#FF0000;"> 后操作之前执行 P(S)</span></li>
+</ol>
+<h5 id="信号量实现进程的前驱关系"><a href="#信号量实现进程的前驱关系" class="headerlink" title="信号量实现进程的前驱关系"></a>信号量实现进程的前驱关系</h5><ol>
+<li>为每一对前去关系设置一个同步信号量</li>
+<li>在前操作之后对相应的信号量执行 V 操作</li>
+<li>在后操作之前对相应的信号量执行 P 操作</li>
+</ol>
+<img src="/2024/05/06/operating-system/image-20240513125201057.png" alt="信号量实现进程的前驱关系">
+
+<blockquote>
+<p>前 V 后 P  </p>
+</blockquote>
+<img src="/2024/05/06/operating-system/image-20240513125858373.png" alt="小节回顾">
+
+<h4 id="经典同步问题"><a href="#经典同步问题" class="headerlink" title="经典同步问题"></a>经典同步问题</h4><img src="/2024/05/06/operating-system/image-20240513140028399.png" alt="PV操作思路问题">
+
+<h5 id="生产者消费者问题"><a href="#生产者消费者问题" class="headerlink" title="生产者消费者问题"></a>生产者消费者问题</h5><h6 id="单生产者单消费者"><a href="#单生产者单消费者" class="headerlink" title="单生产者单消费者"></a>单生产者单消费者</h6><ol>
+<li><p>问题描述</p>
+<ol>
+<li>生产者、消费者共享一个初始为空、大小为 n 的缓冲区。</li>
+<li>只有 <span style="color:#FF0000;"> 缓冲区没满 </span> 时，生产者才能把产品放入缓冲区，否则必须等待</li>
+<li>只有 <span style="color:#FF0000;"> 缓冲区不空 </span> 时，消费者才能从中取出产品，否则必须等待。</li>
+<li>缓冲区是临界资源，必须 <span style="color:#FF0000;"> 互斥访问 </span></li>
+</ol>
+</li>
+<li><p>问题分析</p>
+<ol>
+<li><p>缓冲区互斥访问</p>
+</li>
+<li><img src="/2024/05/06/operating-system/image-20240513134922896.png" alt="同步关系" style="zoom:50%;">
+</li>
+<li><p>code 理解</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">semaphore mutex <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> <span class="token comment">//互斥信号量，实现对缓冲区的互斥访问</span>
+semaphore empty <span class="token operator">=</span> n<span class="token punctuation">;</span> <span class="token comment">//同步信号量，表示空闲缓冲区的数量</span>
+semaphore full <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>    <span class="token comment">//同步信号量，表示产品的数量，也即非空缓冲区的数量</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<img src="/2024/05/06/operating-system/image-20240513135408814.png" alt="生产者与消费者" style="zoom:67%;"></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>思考：能否改变相邻 P，V 操作的顺序？</p>
+<p>答：不可以，会发生死锁</p>
+<p><span style="color:#FF0000;"> 实现互斥的 P 操作一定要在实现同步的 p 操作之后 </span></p>
+<p><span style="color:#FF0000;"> 两个 V 操作可以交换顺序 </span></p>
+</blockquote>
+<h6 id="多生产者多消费者"><a href="#多生产者多消费者" class="headerlink" title="多生产者多消费者"></a>多生产者多消费者</h6><ol>
+<li>问题描述 <img src="/2024/05/06/operating-system/image-20240513140335035.png"></li>
+<li>问题分析<ol>
+<li>互斥：对盘子需要互斥的访问</li>
+<li>同步：<ol>
+<li>父亲放入苹果 -&gt; 女儿取走苹果</li>
+<li>母亲放入橘子 -&gt; 儿子取走橘子</li>
+<li>盘子为空 -&gt; 父亲或者母亲放水果</li>
+</ol>
+</li>
+<li><img src="/2024/05/06/operating-system/image-20240513140943388.png" alt="同步互斥关系" style="zoom:33%;"></li>
+</ol>
+</li>
+<li>code <img src="/2024/05/06/operating-system/image-20240513141300850.png"></li>
+<li>缓冲区为 1, 可以省略互斥量 <img src="/2024/05/06/operating-system/image-20240513141608848.png" alt="" style="zoom:50%;"></li>
+</ol>
+<blockquote>
+<p>原因在于: 本题中的缓冲区大小为 1，在任何时刻，apple、orange，plate 三个同步信号量中最多只有一个是 1。因此在任何时刻最多只有一个进程的 P 操作不会被阻塞，并顺利地进入临界区..</p>
+<p>盘子数量大于 1 的时候必须设置互斥信号量。</p>
+</blockquote>
+<img src="/2024/05/06/operating-system/image-20240513142107253.png" alt="多生产者多消费者问题思考">
 
 
 
+<h5 id="抽烟者问题"><a href="#抽烟者问题" class="headerlink" title="抽烟者问题"></a>抽烟者问题</h5><ol>
+<li>问题描述 <img src="/2024/05/06/operating-system/image-20240513142414162.png"></li>
+<li>问题分析<ol>
+<li>互斥：桌子可以看成一个容量为 1 的缓冲区</li>
+<li>同步问题：<ol>
+<li>桌子上 有 纸和胶水，抽烟者一拿走</li>
+<li>桌子上 有 烟草和胶水，抽烟者二拿走</li>
+<li>桌子上 有 烟草和纸，抽烟者三拿走</li>
+<li>抽烟者拿走后发送信号 -&gt; 供应者放</li>
+</ol>
+</li>
+<li>code <img src="/2024/05/06/operating-system/image-20240513143645806.png"></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>关键：<span style="color:#FF0000;"> 组合 </span></p>
+</blockquote>
+<h5 id="读者写者问题"><a href="#读者写者问题" class="headerlink" title="读者写者问题"></a>读者写者问题</h5><ol>
+<li>问题描述 <img src="/2024/05/06/operating-system/image-20240513143829213.png" style="zoom:67%;"></li>
+<li>问题分析<ol>
+<li>互斥： 读和写，写和写</li>
+<li>code <img src="/2024/05/06/operating-system/image-20240513145402466.png"></li>
+</ol>
+</li>
+</ol>
+<blockquote>
+<p>核心：<span style="color:#FF0000;"> 计数器 count </span></p>
+<p>引入 mutex 的原因是对 count 的访问可能会并发</p>
+</blockquote>
+<h5 id="哲学家问题"><a href="#哲学家问题" class="headerlink" title="哲学家问题"></a>哲学家问题</h5><ol>
+<li>问题描述 <img src="/2024/05/06/operating-system/image-20240513145815953.png"></li>
+<li>问题分析<ol>
+<li>互斥：哲学家和邻居对左右两边筷子的访问</li>
+<li>避免死锁</li>
+<li>方法：<ol>
+<li>最多只允许 4 个哲学家进餐，设置一个初始值为 4 的信号量</li>
+<li>要求奇数号的科学家必须先拿右边筷子，偶数科学家先拿左边筷子</li>
+<li>仅当一个科学家左右两个筷子都能使用的时候拿到两只筷子进餐 <img src="/2024/05/06/operating-system/image-20240513150359674.png" alt="方法3" style="zoom:50%;"></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h5 id="管程"><a href="#管程" class="headerlink" title="管程"></a>管程</h5><h6 id="管程的定义"><a href="#管程的定义" class="headerlink" title="管程的定义"></a>管程的定义</h6><ul>
+<li>管程：高级同步机制</li>
+<li>管程是一种特殊的软件模块，有这些部分组成:<ol>
+<li>局部于管程的 <span style="color:#FF0000;"> 共享数据结构 </span> 说明（类比缓冲区）</li>
+<li>对该数据结构进行操作的 <span style="color:#FF0000;"> 一组过程 </span>(函数)</li>
+<li>对局部于管程的共享数据设置初始值的语句</li>
+<li>管程有一个名字</li>
+</ol>
+</li>
+<li>管程的基本特征:<ol>
+<li>局部于管程的数据只能被局部于管程的过程所访问:</li>
+<li>一个进程只有通过调用管程内的过程才能进入管程访问共享数据:</li>
+<li><span style="color:#FF0000;"> 每次仅允许一个进程在管程内执行某个内部过程，</span></li>
+</ol>
+</li>
+</ul>
+<h6 id="管程解决生产者消费者问题"><a href="#管程解决生产者消费者问题" class="headerlink" title="管程解决生产者消费者问题"></a>管程解决生产者消费者问题</h6><img src="/2024/05/06/operating-system/image-20240513151346079.png">
+
+<blockquote>
+<p>由编译器负责实现各进程互斥地进入管程中的过程</p>
+<p>设置条件变量解决同步问题</p>
+</blockquote>
+<img src="/2024/05/06/operating-system/image-20240513151857088.png" style="zoom:67%;">
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img src="/2024/05/06/operating-system/image-20240513152032968.png" alt="小节回顾">
 
 
 
