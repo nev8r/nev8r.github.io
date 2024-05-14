@@ -1491,50 +1491,157 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
+<blockquote>
+<p>管程 wait 的行为就是阻塞，signal 就是唤醒</p>
+</blockquote>
+<h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><h4 id="死锁的概念"><a href="#死锁的概念" class="headerlink" title="死锁的概念"></a>死锁的概念</h4><h5 id="死锁的定义"><a href="#死锁的定义" class="headerlink" title="死锁的定义"></a>死锁的定义</h5><ul>
+<li>在并发环境下，各进程因竞争资源而造成的一种互相等待对方手里的资源，导致各进程都阻塞，都无法向前推进的现象，就是“死锁”发生死锁后若无外力干涉，这些进程都将无法向前推进。</li>
+</ul>
+<h5 id="死锁、饥饿、死循环的区别"><a href="#死锁、饥饿、死循环的区别" class="headerlink" title="死锁、饥饿、死循环的区别"></a>死锁、饥饿、死循环的区别</h5><ul>
+<li>死锁: 各进程互相等待对方手里的资源，导致各进程都阻塞，无法向前推进的现象。</li>
+<li>饥饿: 由于长期得不到想要的资源，某进程无法向前推进的现象。比如: 在短进程优先(SPF)算法中，若有源源不断的短进程到来，则长进程将一直得不到处理机，从而发生长进程“饥饿”</li>
+<li>死循环: 某进程执行过程中一直跳不出某个循环的现象。有时是因为程序逻辑 bug 导致的，有时是程序员故意设计的。</li>
+</ul>
+<img src="/2024/05/06/operating-system/image-20240514145554602.png">
 
+<h5 id="死锁产生的必要条件"><a href="#死锁产生的必要条件" class="headerlink" title="死锁产生的必要条件"></a>死锁产生的必要条件</h5><ol>
+<li><span style="color:#FF0000;"> 互斥条件: </span> 只有对必须互斥使用的资源的争抢才会导致死锁(如哲学家的筷子、打印机设备)像内存、扬声器这样可以同时让多个进程使用的资源是不会导致死锁的(因为进程不用阻塞等待这种资源)。</li>
+<li><span style="color:#FF0000;"> 不剥夺条件 </span>: 进程所获得的资源在未使用完之前，<span style="color:#FF0000;"> 不能由其他进程强行夺走 </span>，只能主动释放。</li>
+<li><span style="color:#FF0000;"> 请求和保持条件: </span> 进程 <span style="color:#FF0000;"> 已经保持了至少一个资源 </span>，但又提出了新的资源 <span style="color:#FF0000;"> 请求 </span>，而该资源又被其他进程占有，此时请求进程被阻塞，但又对自己已有的资源 <span style="color:#FF0000;"> 保持 </span> 不放。</li>
+<li><span style="color:#FF0000;"> 循环等待条件 </span>: 存在一种进程资源的 <span style="color:#FF0000;"> 循环等待链 </span>，链中的每一个进程已获得的资源同时被下一个进程所请求。</li>
+</ol>
+<blockquote>
+<ul>
+<li>注意! 发生死锁时一定有循环等待，但是发生循环等待时未必死锁(循环等待是死锁的必要不充分条件)</li>
+<li>如果同类资源数大于 1，则即使有循环等待，也未必发生死锁。但如果系统中每类资源都只有一个，那循环等待就是死锁的充分必要条件了</li>
+</ul>
+</blockquote>
+<h5 id="死锁产生的原因"><a href="#死锁产生的原因" class="headerlink" title="死锁产生的原因"></a>死锁产生的原因</h5><ol>
+<li>对系统资源的竞争：对 <span style="color:#FF0000;"> 不可剥夺资源 </span> 的竞争</li>
+<li>进程推进顺序非法: 请求和释放资源的顺序不当</li>
+<li>信号量使用不当</li>
+</ol>
+<h5 id="死锁的处理策略"><a href="#死锁的处理策略" class="headerlink" title="死锁的处理策略 "></a>死锁的处理策略 <img src="/2024/05/06/operating-system/image-20240514151452541.png" alt="死锁的处理策略" style="zoom: 33%;"></h5><ol>
+<li>预防死锁 破坏死锁产生的四个必要条件中的一个或几个</li>
+<li>避免死锁，用某种方法防止系统进入不安全状态，从而避免死锁(银行家算法)</li>
+<li>死锁的检测与解除，允许死锁的发生不过操作系统会负责检测出死锁的发生，然后采取某种措施解除死锁。</li>
+</ol>
+<img src="/2024/05/06/operating-system/image-20240514151321468.png" style="zoom:50%;">
 
+<h4 id="死锁预防"><a href="#死锁预防" class="headerlink" title="死锁预防"></a>死锁预防</h4><h5 id="破坏互斥条件"><a href="#破坏互斥条件" class="headerlink" title="破坏互斥条件"></a>破坏互斥条件</h5><ul>
+<li><p><span style="color:#FF0000;"> 互斥条件: </span> 只有对必须互斥使用的资源的争抢才会导致死锁</p>
+<ul>
+<li>如果把只能互斥使用的资源改造为允许共享使用，系统就不会进入死锁状态<ul>
+<li><span style="color:#FF0000;"> SPOOLing 技术 </span></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>缺点: 并不是所有的资源都可以改造成可共享使用的资源。并且为了系统安全，很多地方还必须保护这种互斥性。因此，<span style="color:#FF0000;"> 很多时候都无法破坏互斥条件。</span></p>
+</li>
+</ul>
+<h5 id="破坏不剥夺条件"><a href="#破坏不剥夺条件" class="headerlink" title="破坏不剥夺条件"></a>破坏不剥夺条件</h5><ul>
+<li><span style="color:#FF0000;"> 不剥夺条件 </span>: 进程所获得的资源在未使用完之前，<span style="color:#FF0000;"> 不能由其他进程强行夺走 </span>，只能主动释放。</li>
+<li>破坏不剥夺条件<ul>
+<li>方案一: 当某个进程请求新的资源得不到满时，它必须立即释放保持的所有资源，待以后需要时再重新申请。也就是说，即使某些资源尚未吏用完，也需要主动释放，从而破坏了不可剥夺条件。</li>
+<li>方案二: 当某个进程需要的资源被其他进程斤占有的时候，可以由操作系统协助，将想要的资源强行剥夺。这种方式一般需要考虑各进程的优级(比如: 剥夺调度方式，就是将处理机资源强行剥夺给优先级更高的进程使用)</li>
+</ul>
+</li>
+<li>该策略的缺点:<ol>
+<li>实现起来比较复杂。</li>
+<li>释放已获得的资源可能造成前一阶段工作失效。因此这种方法一般只适用于易保存和恢复状态的资源，如 CPU。</li>
+<li>反复地申请和释放资源会增加系统开销，降低系统吞量。</li>
+<li>若 <span style="color:#FF0000;"> 采用方案一 </span>，意味着只要暂时得不到某个资源，之前获得的那些资源就都需要放弃，以后再重新申请。如果一直发生这样的情况，就 <span style="color:#FF0000;"> 会导致进程饥饿 </span>。</li>
+</ol>
+</li>
+</ul>
+<h5 id="破坏请求与保持条件"><a href="#破坏请求与保持条件" class="headerlink" title="破坏请求与保持条件"></a>破坏请求与保持条件</h5><ul>
+<li><span style="color:#FF0000;"> 请求和保持条件: </span> 进程 <span style="color:#FF0000;"> 已经保持了至少一个资源 </span>，但又提出了新的资源 <span style="color:#FF0000;"> 请求 </span>，而该资源又被其他进程占有，此时请求进程被阻塞，但又对自己已有的资源 <span style="color:#FF0000;"> 保持 </span> 不放。</li>
+<li>破坏请求与保持条件<ul>
+<li><span style="color:#FF0000;"> 静态分配方法 </span>，即进程在运行前一次申请完它所需要的全部资源，在它的资源未满足前，不让它投入运行。一旦投入运行后，这些资源就一直归它所有，该进程就不会再请求别的任何资源。</li>
+</ul>
+</li>
+<li>缺点：有些资源可能只需要用很短的时间，因此如果进程的整个运行期间都一直保持着所有资源，就会造成严重的资源浪费，<span style="color:#FF0000;"> 资源利用率极低 </span>。另外，该 <span style="color:#FF0000;"> 策略也有可能导致某些进程饥饿 </span>。<img src="/2024/05/06/operating-system/image-20240514153825680.png"></li>
+</ul>
+<h5 id="破坏循环等待条件"><a href="#破坏循环等待条件" class="headerlink" title="破坏循环等待条件"></a>破坏循环等待条件</h5><ul>
+<li><span style="color:#FF0000;"> 循环等待条件 </span>: 存在一种进程资源的 <span style="color:#FF0000;"> 循环等待链 </span>，链中的每一个进程已获得的资源同时被下一个进程所请求。</li>
+<li>破坏循环等待</li>
+<li>可采用 <span style="color:#FF0000;"> 顺序资源分配 </span> 法。首先给系统中的资源编号，规定每个进程 <span style="color:#FF0000;"> 必须按编号递增的顺序请求资源 </span>，同类资源(即编号相同的资源)一次申请完。</li>
+<li>原理分析: 一个进程只有已占有小编号的资源时，才有资格申请更大编号的资源。按此规则，已持有大编号资源的进程不可能逆向地回来申请小编号的资源，从而就不会产生循环等待的现象。</li>
+<li>缺点：<ul>
+<li>1.不方便增加新的设备，因为可能需要重新分配所有的编号;</li>
+<li>2.进程实际使用资源的顺序可能和编号递增顺序不一致，会导致资源浪费;</li>
+<li>3.必须按规定次序申请资源，用户编程麻烦</li>
+</ul>
+</li>
+</ul>
+<img src="/2024/05/06/operating-system/image-20240514154647546.png" style="zoom:80%;">
 
+<h4 id="死锁的避免"><a href="#死锁的避免" class="headerlink" title="死锁的避免"></a>死锁的避免</h4><h5 id="安全序列"><a href="#安全序列" class="headerlink" title="安全序列"></a>安全序列</h5><ul>
+<li><p>所谓 <span style="color:#FF0000;"> 安全序列 </span>，就是指如果系统按照这种序列分配资源，则每个进程都能顺利完成。只要能找出一个安全序列，系统就是 <span style="color:#FF0000;"> 安全状 </span> 态。当然，<span style="color:#FF0000;"> 安全序列可能有多个 </span>。</p>
+</li>
+<li><p>如果分配了资源之后，系统中找不出任何一个安全序列，系统就进入了 <span style="color:#FF0000;"> 不安全状 </span> 态。这就意味着之后可能所有进程都无法顺利的执行下去。当然，如果有进程提前归还了一些资源，那 <span style="color:#FF0000;"> 系统也有可能重新回到安全状态 </span>，不过我们在分配资源之前总是要考虑到最坏的情况。</p>
+</li>
+<li><p>如果系统处于 <span style="color:#FF0000;"> 安全状态，就一定不会发生死锁 </span>。如果系统进入 <span style="color:#FF0000;"> 不安全状态 </span>，就 <span style="color:#FF0000;"> 可能 </span> 发生 <span style="color:#FF0000;"> 死锁 </span></p>
+</li>
+<li><p>因此可以在资源分配之前预先判断这次分配是否会导致系统进入不安全状态，以此决定是否答应资源分配请求。这也是“<span style="color:#FF0000;"> 银行家算法 </span>”的核心思想。</p>
+</li>
+<li><blockquote>
+<p>不安全状态未必就是发生了死锁，但发生死锁时一定是在不安全状态</p>
+</blockquote>
+</li>
+</ul>
+<h5 id="银行家算法"><a href="#银行家算法" class="headerlink" title="银行家算法"></a>银行家算法</h5><img src="/2024/05/06/operating-system/image-20240514170156158.png" alt="银行家算法" style="zoom:67%;">
 
+<blockquote>
+<p>一定要会模拟 </p>
+</blockquote>
+<img src="/2024/05/06/operating-system/image-20240514170915391.png" alt="">
 
+<h5 id="死锁的检测和解除"><a href="#死锁的检测和解除" class="headerlink" title="死锁的检测和解除"></a>死锁的检测和解除</h5><h6 id="死锁的检测"><a href="#死锁的检测" class="headerlink" title="死锁的检测"></a>死锁的检测</h6><ul>
+<li><p>为了能对系统是否已发生了死锁进行检测，必须:</p>
+<ul>
+<li><p>用 <span style="color:#FF0000;"> 某种数据结构 </span> 来保存资源的请求和分配信息;</p>
+<ul>
+<li>资源分配图<ul>
+<li>两种结点<ul>
+<li>进程节点：对应一个进程</li>
+<li>资源结点：对应一类资源，一类医院可能有多个</li>
+</ul>
+</li>
+<li>两种边<ul>
+<li>分配边：资源结点-&gt; 进程结点：表示已经为进程分配了几个资源（一条边代表一个）</li>
+<li>请求变：进程结点 -&gt; 资源结点：表示进程想申请几个资源（一条边代表一个）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>提供 <span style="color:#FF0000;"> 一种算法 </span>，利用上述信息来检测系统是否已进入死锁状态</p>
+<ul>
+<li>所有边都可以消除，一定没有发生死锁（对于资源结点，度数（包含出入度）大于结点的权值，有进程 不能执行）</li>
+</ul>
+<blockquote>
+<p>死锁定理: 如果某时刻系统的资源分配图是不可完全简化的，那么此时系统死锁</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+<h6 id="死锁的解除"><a href="#死锁的解除" class="headerlink" title="死锁的解除"></a>死锁的解除</h6><img src="/2024/05/06/operating-system/image-20240514172352427.png" alt="image-20240514172352427">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<blockquote>
+<p>考虑角度:</p>
+<ul>
+<li>进程优先级</li>
+<li>已经执行多长时间</li>
+<li>还有多久能完成</li>
+<li>进程已经使用了多少资源</li>
+<li>交互式还是批处理式</li>
+</ul>
+</blockquote>
+<img src="/2024/05/06/operating-system/image-20240514172606860.png" style="zoom:50%;">
 
 
 
