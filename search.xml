@@ -1201,7 +1201,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
-<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="内存的基本知识"><a href="#内存的基本知识" class="headerlink" title="内存的基本知识"></a>内存的基本知识</h3><h4 id="内存的概念"><a href="#内存的概念" class="headerlink" title="内存的概念"></a>内存的概念</h4><ul>
+<h2 id="内存管理"><a href="#内存管理" class="headerlink" title="内存管理"></a>内存管理</h2><h3 id="内存管理概念"><a href="#内存管理概念" class="headerlink" title="内存管理概念"></a>内存管理概念</h3><h4 id="内存的概念"><a href="#内存的概念" class="headerlink" title="内存的概念"></a>内存的概念</h4><ul>
 <li>内存可存放数据。程序执行前 <span style="color:#FF0000;"> 需要先放到内存中才能被 CPU 处理-</span>-缓和 CPU 与硬盘之间的速度矛盾</li>
 <li>内存地址从 0 开始，每个地址对应一个存储单</li>
 <li>内存的单位<ul>
@@ -1210,7 +1210,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 </li>
 </ul>
-<h4 id="指令和程序工作的原理"><a href="#指令和程序工作的原理" class="headerlink" title="指令和程序工作的原理"></a>指令和程序工作的原理</h4><ul>
+<h5 id="指令和程序工作的原理"><a href="#指令和程序工作的原理" class="headerlink" title="指令和程序工作的原理"></a>指令和程序工作的原理</h5><ul>
 <li><p>逻辑地址：程序经过编译、链接后生成的指令中指明的是逻辑地址(相对地址)，即: 相对于进程的起始地址而言的地址</p>
 </li>
 <li><p>物理地址：绝对地址</p>
@@ -1236,6 +1236,9 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 </li>
 </ul>
+<blockquote>
+<p>注意：整个系统设置一个重定位寄存器</p>
+</blockquote>
 </li>
 <li><p>从写程序到程序运行</p>
 <ul>
@@ -1252,9 +1255,13 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 </li>
 </ul>
+<blockquote>
+<p>链接形成逻辑地址</p>
+<p>装入是将程序放入内存，形成物理地址</p>
+</blockquote>
 <img src="/2024/05/06/operating-system/image-20240515152136078.png">
 
-<h4 id="内存的管理概念"><a href="#内存的管理概念" class="headerlink" title="内存的管理概念"></a>内存的管理概念</h4><ul>
+<h5 id="内存的管理概念"><a href="#内存的管理概念" class="headerlink" title="内存的管理概念"></a>内存的管理概念</h5><ul>
 <li>内存空间的分配与回收</li>
 <li>内存空间的扩充（虚拟性）</li>
 <li>地址转换（三种重定位方式）</li>
@@ -1266,10 +1273,10 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 <img src="/2024/05/06/operating-system/image-20240515153215069.png" alt="内存管理工作" style="zoom:50%;">
 
-<h3 id="内存空间的扩充"><a href="#内存空间的扩充" class="headerlink" title="内存空间的扩充"></a>内存空间的扩充</h3><ul>
+<h4 id="内存空间的扩充"><a href="#内存空间的扩充" class="headerlink" title="内存空间的扩充"></a>内存空间的扩充</h4><ul>
 <li>覆盖技术，交换技术，虚拟技术</li>
 </ul>
-<h4 id="覆盖技术"><a href="#覆盖技术" class="headerlink" title="覆盖技术"></a>覆盖技术</h4><ul>
+<h5 id="覆盖技术"><a href="#覆盖技术" class="headerlink" title="覆盖技术"></a>覆盖技术</h5><ul>
 <li>思想：将 <span style="color:#FF0000;"> 程序分为多个段 </span>(多个模块)常用的段常驻内存，不常用的段在需要时调入内存。<ul>
 <li>内存中分为 <span style="color:#FF0000;"> 一个“<span style="color:#FF0000;"> 固定区 </span>”</span> 和若 <span style="color:#FF0000;"> 干个“覆盖区”&nbsp;</span></li>
 <li>需要常驻内存的段放在“<span style="color:#FF0000;"> 固定区 </span>”中，<span style="color:#FF0000;"> 调入后就不再调出 </span>(除非运行结束)</li>
@@ -1278,7 +1285,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </li>
 <li><span style="color:#FF0000;"> 缺点 </span>: 必须由程序员声明覆盖结构，操作系统完成自动覆盖。对用户不透明，增加了用户编程负担。</li>
 </ul>
-<h4 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h4><ul>
+<h5 id="交换技术"><a href="#交换技术" class="headerlink" title="交换技术"></a>交换技术</h5><ul>
 <li>思想: 内存空间紧张时，系统将内存中某些进程暂时 <span style="color:#FF0000;"> 换出 </span> 外存，把外存中某些已具备运行条件的进程 <span style="color:#FF0000;"> 换入 </span> 内存(进程在内存与磁盘间动态调度)<ul>
 <li>内存调度，挂起</li>
 <li><span style="color:#FF0000;">&nbsp;换出的位置：磁盘空间的对换区 </span> 空间只占磁盘空间的小部分，<span style="color:#FF0000;"> 被换出的进程数据就存放在对换区 </span>。由于对换的速度直接影响到系统的整体速度，因此对换区空间的管理主要追求 <span style="color:#FF0000;"> 换入换出速度 </span>，因此通常对换区采用 <span style="color:#FF0000;"> 连续分配方式 </span>。</li>
@@ -1294,10 +1301,10 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 <img src="/2024/05/06/operating-system/image-20240515154938197.png" style="zoom:33%;">
 
-<h3 id="连续分配管理方式"><a href="#连续分配管理方式" class="headerlink" title="连续分配管理方式"></a>连续分配管理方式</h3><ul>
+<h4 id="连续分配管理方式"><a href="#连续分配管理方式" class="headerlink" title="连续分配管理方式"></a>连续分配管理方式</h4><ul>
 <li>为用户进程分配的必须是一个连续的内存空间</li>
 </ul>
-<h4 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h4><ul>
+<h5 id="单一连续分配"><a href="#单一连续分配" class="headerlink" title="单一连续分配"></a>单一连续分配</h5><ul>
 <li>概念：在单一连续分配方式中，内存被分为 <span style="color:#FF0000;"> 系统区 </span> 和 <span style="color:#FF0000;"> 用户区 </span>。系统区通常位于内存的低地址部分，用于存放操作系统相关数据; 用户区用于存放用户进程相关数据。内存中只有一道用户程序，用户程序独占整个用户区。</li>
 <li><span style="color:#FF0000;"> 优点 </span>：<ul>
 <li>实现简单</li>
@@ -1316,7 +1323,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 </li>
 </ul>
-<h4 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h4><ul>
+<h5 id="固定分区分配"><a href="#固定分区分配" class="headerlink" title="固定分区分配"></a>固定分区分配</h5><ul>
 <li><p>将整个 <span style="color:#FF0000;"> 用户空间 </span> 划分为若 <span style="color:#FF0000;"> 干个固定大小的分区 </span>，在 <span style="color:#FF0000;"> 每个分区中只装入一道作业 </span>，这样就形成了最早的、最简单的一种可运行多道程序的内存管理方式。</p>
 </li>
 <li><p>两种方式</p>
@@ -1349,7 +1356,11 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 </li>
 </ul>
-<h4 id="动态分区分配"><a href="#动态分区分配" class="headerlink" title="动态分区分配"></a>动态分区分配</h4><ul>
+<blockquote>
+<p>注意：</p>
+<p>固定是指区分分配好之后固定，并不是指分区的大小全部固定为一个大小，分区大小可以不同，但是分配好后不会变化</p>
+</blockquote>
+<h5 id="动态分区分配"><a href="#动态分区分配" class="headerlink" title="动态分区分配"></a>动态分区分配</h5><ul>
 <li><p><span style="color:#FF0000;"> 动态分区分配 </span> 又称为 <span style="color:#FF0000;"> 可变分区分配 </span>。这种分配方式 <span style="color:#FF0000;"> 不会预先划分内存分区 </span>，而是在进程装入内存时 <span style="color:#FF0000;"> 根据进程的大小动态地建立分区 </span>，并使分区的大小正好适合进程的需要。因此系统分区的大小和数目是可变的。</p>
 </li>
 <li><p>控制数据结构</p>
@@ -1390,11 +1401,11 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
-<h4 id="动态分区分配算法"><a href="#动态分区分配算法" class="headerlink" title="动态分区分配算法"></a>动态分区分配算法</h4><h5 id="First-Fit-首次适应算法"><a href="#First-Fit-首次适应算法" class="headerlink" title="First Fit(首次适应算法)"></a>First Fit(首次适应算法)</h5><ul>
+<h5 id="动态分区分配算法"><a href="#动态分区分配算法" class="headerlink" title="动态分区分配算法"></a>动态分区分配算法</h5><h6 id="First-Fit-首次适应算法"><a href="#First-Fit-首次适应算法" class="headerlink" title="First Fit(首次适应算法)"></a>First Fit(首次适应算法)</h6><ul>
 <li>算法思想: 每次都从低地址开始查找，找到第一个能满足大小的空闲分区。</li>
 <li>如何实现: <span style="color:#FF0000;"> 空闲分区以地址递增的次序排列 </span>。每次分配内存时顺序查找空闲分区链(或空闲分区表)，找到大小能 <span style="color:#FF0000;"> 满足要求的第一个空闲分区 </span>。</li>
 </ul>
-<h5 id="Best-Fit-最佳适应算法"><a href="#Best-Fit-最佳适应算法" class="headerlink" title="Best Fit(最佳适应算法)"></a>Best Fit(最佳适应算法)</h5><ul>
+<h6 id="Best-Fit-最佳适应算法"><a href="#Best-Fit-最佳适应算法" class="headerlink" title="Best Fit(最佳适应算法)"></a>Best Fit(最佳适应算法)</h6><ul>
 <li>算法思想: 由于动态分区分配是一种连续分配方式，为各进程分配的空间必须是连续的一整片区域。因此为了保证当“大进程”到来时能有连续的大片空间，可以尽可能多地留下大片的空闲区即，优先使用更小的空闲区。</li>
 <li>如何实现: <span style="color:#FF0000;"> 空闲分区按容量递增次序链接 </span>。每次分配内存时 <span style="color:#FF0000;"> 顺序查找 </span> 空闲分区链(或空闲分区表)，找到大小能满足要求的第一个空闲分区。</li>
 </ul>
@@ -1404,7 +1415,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 <ul>
 <li>缺点：每次都选最小的分区进行分配，会留下越来越多的、很小的、难以利用的内存块。因此这种方法 <span style="color:#FF0000;"> 会产生很多的外部碎片 </span>。</li>
 </ul>
-<h5 id="Worst-Fit-最坏适应算法"><a href="#Worst-Fit-最坏适应算法" class="headerlink" title="Worst Fit(最坏适应算法)"></a>Worst Fit(最坏适应算法)</h5><ul>
+<h6 id="Worst-Fit-最坏适应算法"><a href="#Worst-Fit-最坏适应算法" class="headerlink" title="Worst Fit(最坏适应算法)"></a>Worst Fit(最坏适应算法)</h6><ul>
 <li><p>又称 最大适应算法(Largest Fit)</p>
 </li>
 <li><p>算法思想: 为了解决最佳适应算法的问题–即留下太多难以利用的小碎片，可以在每次分配时优先使用最大的连续空闲区，这样分配后剩余的空闲区就不会太小，更方便使用。</p>
@@ -1414,7 +1425,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 <li><p>缺点: 每次都选最大的分区进行分配，虽然可以让分配后留下的空闲区更大，更可用，但是这种方式会导致较大的连续空闲区被迅速用完。如果之后有“大进程”到达，就没有内存分区可用了</p>
 </li>
 </ul>
-<h5 id="Next-Fit-临近适应算法"><a href="#Next-Fit-临近适应算法" class="headerlink" title="Next Fit(临近适应算法)"></a>Next Fit(临近适应算法)</h5><ul>
+<h6 id="Next-Fit-临近适应算法"><a href="#Next-Fit-临近适应算法" class="headerlink" title="Next Fit(临近适应算法)"></a>Next Fit(临近适应算法)</h6><ul>
 <li>算法思想: 首次适应算法每次都从链头开始查找的。这可能会导致低地址部分出现很多小的空闲分区，而每次分配查找时，都要经过这些分区，因此也增加了查找的开销。如果每次都从上次查找结束的位置开始检索，就能解决上述问题。</li>
 <li>如何实现: 空闲分区 <span style="color:#FF0000;"> 以地址递增的顺序排列(</span> 可排成一个循环链表)。每次分配内存时 <span style="color:#FF0000;"> 从上次查找结束的位置开始 </span> 查找空闲分区链(或空闲分区表)，找到大小能满足要求的第一个空闲分区。</li>
 <li>比较 <img src="/2024/05/06/operating-system/image-20240515164408123.png" alt="" style="zoom:50%;"></li>
@@ -1423,7 +1434,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
-<h3 id="基础分页存储管理"><a href="#基础分页存储管理" class="headerlink" title="基础分页存储管理"></a>基础分页存储管理</h3><h4 id="分页存储基本概念"><a href="#分页存储基本概念" class="headerlink" title="分页存储基本概念"></a>分页存储基本概念</h4><ul>
+<h4 id="基础分页存储管理"><a href="#基础分页存储管理" class="headerlink" title="基础分页存储管理"></a>基础分页存储管理</h4><h5 id="分页存储基本概念"><a href="#分页存储基本概念" class="headerlink" title="分页存储基本概念"></a>分页存储基本概念</h5><ul>
 <li>将内存空间分为一个个 <span style="color:#FF0000;"> 大小相等的分区 </span>(比如: 每个分区 4KB)，每个分区就是一个“<span style="color:#FF0000;"> 页框 </span>”(<span style="color:#FF0000;"> 页框 = 页帧 = 内存块 = 物理块 = 物理页面 </span>)。每个页框有一个编号，即“<span style="color:#FF0000;"> 页框号 </span>”(<span style="color:#FF0000;"> 页框号 = 页帧号 = 内存块号 = 物理块号 = 物理页号 </span>)，页框号 <span style="color:#FF0000;"> 从 0 开始 </span>。</li>
 <li>将 <span style="color:#CC00CC;"> 进程的逻辑地址空间 </span> 也分为 <span style="color:#FF0000;"> 与页框大小相等 </span> 的一个个部分每个部分称为一个“<span style="color:#FF0000;"> 页 </span>”或“<span style="color:#FF0000;"> 页面 </span>”。每个页面也有一个编号，即“<span style="color:#FF0000;"> 页号 </span>”，页号也是从 0 开始。</li>
 </ul>
@@ -1461,7 +1472,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
-<h4 id="基本地址变换机构"><a href="#基本地址变换机构" class="headerlink" title="基本地址变换机构"></a>基本地址变换机构</h4><ul>
+<h5 id="基本地址变换机构"><a href="#基本地址变换机构" class="headerlink" title="基本地址变换机构"></a>基本地址变换机构</h5><ul>
 <li>基本地址变换机构可以借助进程的页表将逻辑地址转换为物理地址。</li>
 <li>通常会在系统中设置一个 <span style="color:#FF0000;"> 页表寄存器(PTR)</span>，存放 <span style="color:#FF0000;"> 页表在内存中的起始地址 F 和页表长度 M </span>。进程未执行时，页表的始址和页表长度放在 <span style="color:#FF0000;"> 进程控制块(PCB)</span> 中，当进程被调度时，操作系统内核会把它们放到页表寄存器中。</li>
 </ul>
@@ -1479,7 +1490,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 <blockquote>
 <p>两次访问内存 1 访问页表 2 访问地址</p>
 </blockquote>
-<h4 id="具有快表的地址变换机构"><a href="#具有快表的地址变换机构" class="headerlink" title="具有快表的地址变换机构"></a>具有快表的地址变换机构</h4><ul>
+<h5 id="具有快表的地址变换机构"><a href="#具有快表的地址变换机构" class="headerlink" title="具有快表的地址变换机构"></a>具有快表的地址变换机构</h5><ul>
 <li><span style="color:#FF0000;"> 快表 </span>，又称 <span style="color:#FF0000;"> 联想寄存器(TLB </span>，translationlookaside buffer)，是一种 <span style="color:#FF0000;"> 访问速度比内存快很多 </span> 的高速缓存(<span style="color:#FF0000;"> TLB 不是内存 </span>!)，用来 <span style="color:#FF0000;"> 存放最近访问的页表项的副本 </span>，可以加速地址变换的速度。与此对应，内存中的页表常称为 <span style="color:#FF0000;"> 慢表 </span>。</li>
 </ul>
 <img src="/2024/05/06/operating-system/image-20240515194830258.png">
@@ -1496,7 +1507,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 <img src="/2024/05/06/operating-system/image-20240515195318650.png" alt="引入快表前后对比">
 
-<h4 id="两级页表-多级页表"><a href="#两级页表-多级页表" class="headerlink" title="两级页表&amp;&amp;多级页表"></a>两级页表&amp;&amp;多级页表</h4><ul>
+<h5 id="两级页表-多级页表"><a href="#两级页表-多级页表" class="headerlink" title="两级页表&amp;&amp;多级页表"></a>两级页表&amp;&amp;多级页表</h5><ul>
 <li><p>引入-单级页表存在的问题</p>
 <ul>
 <li><span style="color:#FF0000;"> 页表必须连续存放，当页表过大时，占用很多连续的页框 </span></li>
@@ -1521,7 +1532,7 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
  <img src="/2024/05/06/operating-system/image-20240515200924739.png" style="zoom:50%;">
 
-<h3 id="基础分段存储管理方式"><a href="#基础分段存储管理方式" class="headerlink" title="基础分段存储管理方式"></a>基础分段存储管理方式</h3><h4 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h4><ul>
+<h4 id="基础分段存储管理方式"><a href="#基础分段存储管理方式" class="headerlink" title="基础分段存储管理方式"></a>基础分段存储管理方式</h4><h5 id="分段"><a href="#分段" class="headerlink" title="分段"></a>分段</h5><ul>
 <li>进程的地址空间: 按照程序 <span style="color:#FF0000;"> 自身的逻辑 </span> 关系 <span style="color:#FF0000;"> 划分为若干个段 </span>，每个段都有一个段名(在低级语言中，程序员使用段名来编程)，<span style="color:#FF0000;"> 每段从 0 开始编址 </span></li>
 <li>内存分配规则: 以段为单位进行分配，<span style="color:#FF0000;"> 每个段在内存中占据连续空间 </span>，但 <span style="color:#FF0000;"> 各段之间可以不相邻 </span>。</li>
 <li>由于是按逻辑功能模块划分，用户 <span style="color:#FF0000;"> 编程更方便，程序的可读性更高 </span></li>
@@ -1529,19 +1540,19 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 <li><span style="color:#FF0000;"> 段号的位数决定了每个进程最多可以分几个段 </span></li>
 <li><span style="color:#FF0000;"> 段内地址位数决定了每个段的最大长度是多少 </span></li>
 </ul>
-<h4 id="段表"><a href="#段表" class="headerlink" title="段表"></a>段表</h4><ul>
+<h5 id="段表"><a href="#段表" class="headerlink" title="段表"></a>段表</h5><ul>
 <li>段时离散的存放的，所以需要为每个进程建立一张段映射表，简称“<span style="color:#FF0000;"> 段表 </span>“<img src="/2024/05/06/operating-system/image-20240516131213379.png" alt="" style="zoom:50%;"></li>
 </ul>
 <blockquote>
 <p>段号是隐含的</p>
 </blockquote>
-<h4 id="地址变换"><a href="#地址变换" class="headerlink" title="地址变换"></a>地址变换</h4> <img src="/2024/05/06/operating-system/image-20240516131752786.png" style="zoom:50%;">
+<h5 id="地址变换"><a href="#地址变换" class="headerlink" title="地址变换"></a>地址变换</h5> <img src="/2024/05/06/operating-system/image-20240516131752786.png" style="zoom:50%;">
 
 
 
 
 
-<h4 id="分页和分段对比"><a href="#分页和分段对比" class="headerlink" title="分页和分段对比"></a>分页和分段对比</h4><ul>
+<h5 id="分页和分段对比"><a href="#分页和分段对比" class="headerlink" title="分页和分段对比"></a>分页和分段对比</h5><ul>
 <li>页是 <span style="color:#FF0000;"> 信息的物理单位 </span>。分页的主要目的是为了实现离散分配，提高内存利用率。分页仅仅是系统管理上的需要，完全是系统行为，对 <span style="color:#FF0000;"> 用户是不可见的 </span>。</li>
 <li>段是 <span style="color:#FF0000;"> 信息的逻辑单位 </span>。分段的主要目的是更好地满足用户需求。一个段通常包含着一组属于一个逻辑模块的信息。<span style="color:#FF0000;"> 分段对用户是可见的 </span>，用户编程时需要显式地给出段名。</li>
 <li>页的大小固定且由系统决定。段的长度却不固定，决定于用户编写的程序。</li>
@@ -1562,14 +1573,14 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 </ul>
 <img src="/2024/05/06/operating-system/image-20240516132814110.png" style="zoom:67%;">
 
-<h3 id="段页式管理方式"><a href="#段页式管理方式" class="headerlink" title="段页式管理方式"></a>段页式管理方式</h3><h4 id="分段分页优缺点"><a href="#分段分页优缺点" class="headerlink" title="分段分页优缺点"></a>分段分页优缺点</h4><img src="/2024/05/06/operating-system/image-20240516133026280.png" style="zoom:33%;">
+<h4 id="段页式管理方式"><a href="#段页式管理方式" class="headerlink" title="段页式管理方式"></a>段页式管理方式</h4><h5 id="分段分页优缺点"><a href="#分段分页优缺点" class="headerlink" title="分段分页优缺点"></a>分段分页优缺点</h5><img src="/2024/05/06/operating-system/image-20240516133026280.png" style="zoom:33%;">
 
-<h4 id="段页式管理"><a href="#段页式管理" class="headerlink" title="段页式管理"></a>段页式管理</h4><ol>
+<h5 id="段页式管理"><a href="#段页式管理" class="headerlink" title="段页式管理"></a>段页式管理</h5><ol>
 <li>将进程按逻辑模块分段, 再将各段分页(如每个页面 4KB)</li>
 <li>再将内存空间分为大小相同的内存块/页框/页帧/物理块</li>
 <li>进程前将各页面分别装入各内存块中</li>
 </ol>
-<h4 id="段页式地址结构"><a href="#段页式地址结构" class="headerlink" title="段页式地址结构"></a>段页式地址结构</h4><img src="/2024/05/06/operating-system/image-20240516133355639.png" style="zoom:50%;">
+<h5 id="段页式地址结构"><a href="#段页式地址结构" class="headerlink" title="段页式地址结构"></a>段页式地址结构</h5><img src="/2024/05/06/operating-system/image-20240516133355639.png" style="zoom:50%;">
 
 <blockquote>
 <p>段号的位数决定了每个进程最多可以分几个段</p>
@@ -1577,9 +1588,9 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 <p>页内偏移量决定了页面大小、内存块大小是多少</p>
 <p>段页式管理的地址结构是二维的</p>
 </blockquote>
-<h4 id="段表，页表"><a href="#段表，页表" class="headerlink" title="段表，页表"></a>段表，页表</h4><img src="/2024/05/06/operating-system/image-20240516133724320.png" style="zoom:50%;">
+<h5 id="段表，页表"><a href="#段表，页表" class="headerlink" title="段表，页表"></a>段表，页表</h5><img src="/2024/05/06/operating-system/image-20240516133724320.png" style="zoom:50%;">
 
-<h4 id="地址转换"><a href="#地址转换" class="headerlink" title="地址转换"></a>地址转换</h4><img src="/2024/05/06/operating-system/image-20240516134028010.png">
+<h5 id="地址转换"><a href="#地址转换" class="headerlink" title="地址转换"></a>地址转换</h5><img src="/2024/05/06/operating-system/image-20240516134028010.png">
 
 <blockquote>
 <p>三次访存</p>
@@ -1589,19 +1600,52 @@ semaphore full <span class="token operator">=</span> <span class="token number">
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h3 id="虚拟内存管理"><a href="#虚拟内存管理" class="headerlink" title="虚拟内存管理"></a>虚拟内存管理</h3><h4 id="虚拟存储的概念"><a href="#虚拟存储的概念" class="headerlink" title="虚拟存储的概念"></a>虚拟存储的概念</h4><h5 id="传统管理方式的特征"><a href="#传统管理方式的特征" class="headerlink" title="传统管理方式的特征"></a>传统管理方式的特征</h5><ol>
+<li><span style="color:#FF0000;">一次性:作业必须一次性全部装入内存后才能开始运行</span>。这会造成两个问题:<ol>
+<li>作业很大时，不能全部装入内存，导致<span style="color:#FF0000;">大作业无法运行</span>;</li>
+<li>当大量作业要求运行时，由于内存无法容纳所有作业，因此只有少量作业能运行，导致<span style="color:#FF0000;">多道程序并发度下降</span>。</li>
+</ol>
+</li>
+<li><span style="color:#FF0000;">驻留性</span>:一旦作业被装入内存，就会<span style="color:#FF0000;">一直驻留在内存中</span>，直至作业运行结束。事实上，在一个时间段内，只需要访问作业的一小部分数据即可正常运行，这就导致了内存中会驻留大量的、暂时用不到的数据，浪费了宝贵的内存资源。</li>
+</ol>
+<h5 id="局部性原理"><a href="#局部性原理" class="headerlink" title="局部性原理"></a>局部性原理</h5><ul>
+<li><span style="color:#FF0000;">时间局部性</span>:如果执行了程序中的某条指令，那么不久后这条指令很有可能再次执行;如果某个数据被访问过，不久之后该数据很可能再次被访问。(因为程序中存在大量的循环)</li>
+<li><span style="color:#FF0000;">空间局部性</span>:一旦程序访问了某个存储单元，在不久之后，其附近的存储单元也很有可能被访问(因为很多数据在内存中都是连续存放的，并且程序的指令也是顺序地在内存中存放的)</li>
+</ul>
+<h5 id="虚拟内存"><a href="#虚拟内存" class="headerlink" title="虚拟内存"></a>虚拟内存</h5><ul>
+<li><p><span style="color:#FF0000;">虚拟内存:</span>  在操作系统的管理下，在用户看来似乎有一个比实际内存大得多的内存</p>
+<ul>
+<li><p>基于局部性原理，在程序装入时，可以将程序中<span style="color:#FF0000;">很快会用到的部分装入内存，暂时用不到的部分留在外存</span>就可以让程序开始执行。</p>
+</li>
+<li><p>在程序执行过程中，当所访问的<span style="color:#FF0000;">信息不在内存</span>时，由<span style="color:#FF0000;">操作系统负责将所需信息从外存调入内存</span>，然后继续执行程序。</p>
+</li>
+<li><p>若内存空间不够，由<span style="color:#FF0000;">操作系统</span>负责将内存中<span style="color:#FF0000;">暂时用不到的信息换出到外存</span></p>
+</li>
+</ul>
+</li>
+<li><p>特征：</p>
+<ul>
+<li><span style="color:#FF0000;">多次性</span>:无需在作业运行时一次性全部装入内存，而是允许被分成多次调入内存。</li>
+<li><span style="color:#FF0000;">对换性:</span>在作业运行时无需一直常驻内存，而是允许在作业运行过程中，将作业换入、换出。</li>
+<li><span style="color:#FF0000;">虚拟性:</span>从逻辑上扩充了内存的容量，使用户看到的内存容量，远大于实际的容量</li>
+</ul>
+</li>
+</ul>
+<h5 id="虚拟内存技术实现"><a href="#虚拟内存技术实现" class="headerlink" title="虚拟内存技术实现"></a>虚拟内存技术实现</h5><ul>
+<li>虚拟内存技术，允许一个作业分多次调入内存。如果采用连续分配方式，会不方便实现。因此，<span style="color:#FF0000;">虚拟内存的实现需要建立在离散分配的内存管理方式基础上</span>。</li>
+<li>方式<ul>
+<li>请求分页存储管理</li>
+<li>请求分段存储管理</li>
+<li>请求段页式存储管理</li>
+<li>与传统方式的区别：<ul>
+<li>在程序执行过程中，当所<span style="color:#FF0000;">访问的信息不在内存时，由操作系统负责将所需信息从外存调入内存</span>，然后继续执行程序。（请求调页/段）</li>
+<li>若内存空间不够，由操作系统负责<span style="color:#FF0000;">将内存中暂时用不到的信息换出到外存</span>。（页面/段置换）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<img src="/2024/05/06/operating-system/image-20240516171811629.png">
 
 
 
