@@ -1,1 +1,9 @@
-@font-face{font-family:myFont;src:url(../font/myFont.otf)}body{font-family:myFont}
+/* Here is your custom css styles. */
+@font-face{
+    font-family: 'myFont';
+    src: url('../font/myFont.otf');
+}
+
+body{
+    font-family: 'myFont';
+}
