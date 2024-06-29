@@ -33,12 +33,20 @@
     }
 }
 
-body {
+/* body {
     background-color: #eaeaea;
     margin: 0;
     color: #34495e;
     overflow-x: hidden;
     overflow-y: auto;
+} */
+
+body {
+    /* background-color: #eaeaea; */
+    background: linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)) 0% 0% / cover, url("https://ae01.alicdn.com/kf/H18a4b998752a4ae68b8e85d432a5aef0l.png"), url("https://ae01.alicdn.com/kf/H21b5f6b8496141a1979a33666e1074d9x.jpg") 0px 0px;
+    background-attachment: fixed;
+    margin: 0;
+    color: #7F95D1;
 }
 
 h1 {
@@ -102,7 +110,10 @@ blockquote {
 
 pre {
     padding: 2rem 1rem 1rem 3rem !important;
+    margin: 1rem 0 !important;
     border-radius: 0.35rem;
+    background: #272822;
+    overflow: auto;
     tab-size: 4;
 }
 
@@ -241,11 +252,13 @@ mark {
 }
 
 .bg-color {
-    background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background-image: linear-gradient(to right, #ffb8c6 0%, #f0768b 100%);
+    opacity: 0.8;
 }
 
+
 .text-color {
-    color: #0f9d58 !important;
+    color: #f0768b !important;
 }
 
 .white-color {
@@ -257,7 +270,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    background: linear-gradient(to right, #ffb8c6 0%, #f0768b 100%);
     opacity: 0.8;
 }
 
@@ -538,7 +551,8 @@ header .go-back i {
     border: 0;
     overflow: hidden;
     background-position: center center;
-    background-size: cover;
+    background-size: 0%;
+    background-repeat: no-repeat;
     transform: translate3d(0px, 0px, 0px);
 }
 
@@ -577,6 +591,7 @@ header .go-back i {
     font-size: 4rem;
     line-height: 1.2em;
     margin-bottom: 20px;
+    color: #fcd217;
     position: relative;
 }
 
@@ -584,7 +599,7 @@ header .go-back i {
     font-weight: 300;
     font-size: 1.25rem;
     line-height: 1.4em;
-    color: #eee;
+    color: #fcd217;
 }
 
 .bg-cover .post-title {
@@ -593,7 +608,7 @@ header .go-back i {
     font-weight: 400;
 }
 
-@-webkit-keyframes rainbow {
+/* @-webkit-keyframes rainbow {
 
     0%,
     100% {
@@ -683,7 +698,7 @@ header .go-back i {
         background: -moz-linear-gradient(135deg, rgba(233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
-}
+} */
 
 .index-card {
     margin-top: -10px;
@@ -864,7 +879,9 @@ header .go-back i {
 /*文章列表卡片各样式*/
 #articles {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
+    box-sizing: border-box;
+    width: 780px;
 }
 
 article a {
@@ -885,17 +902,21 @@ article a:hover {
 }
 
 article .card {
-    border-radius: 8px;
+    border-radius: 10px;
     overflow: hidden;
+    box-sizing: border-box;
+    width: 240px;
+    height: 300px;
 }
 
 article .card-image {
+    /* height: 170px; */
     background-color: #222;
     border-radius: 8px;
 }
 
 article .card-image img {
-    height: 220px;
+    height: 170px;
     border-radius: 0.3rem;
     opacity: .7;
 }
@@ -905,11 +926,11 @@ article .tag-image img {
 }
 
 article .card .card-content {
-    padding: 15px 15px 12px 18px;
+    padding: 8px 5px 2px 4px;
 }
 
 article .article-content .summary {
-    padding-bottom: 2px;
+    padding-bottom: 6px;
     padding-left: 0;
     margin-bottom: 6px;
     word-break: break-all;
@@ -978,25 +999,41 @@ article .article-tags .chip {
 }
 
 .paging .row {
-    margin-left: 0;
+    margin-left: 10vw;
     margin-right: 0;
+    width: 77%;
+}
+
+.paging .left {
+    background-color: #867018; 
+    width: 3rem;
+    height: 3rem;
+}
+.paging .right {
+    background-color: #867018;
+    width: 3rem;
+    height: 3rem;
 }
 
 .paging .page-info {
-    font-size: 1.4rem;
-    color: #888;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #867018;
     padding-top: 1rem;
 }
 
-.paging i {
-    font-size: 2.5rem;
-}
 
-.paging .disabled {
+.paging i { /* 卡片翻页按钮内部指示线 */
+    font-size: 1.5rem;
+    transform: translateY(-0.4rem);
+}
+ 
+.paging .disabled { /* 卡片翻页按钮末尾状态圆 */
     background-color: #ccc !important;
+    height: 3rem;
+    width: 3rem;
 }
-
-.paging .disabled i {
+.paging .disabled i { /* 卡片翻页按钮末尾状态内部指示线 */
     color: #999 !important;
 }
 
@@ -1317,7 +1354,7 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
+    background: linear-gradient(to right, #ffb8c6 0%, #f0768b 100%) !important;
 }
 
 .chip .tag-length {
@@ -1393,7 +1430,7 @@ thead {
     left: 18px;
     height: 100%;
     width: 4px;
-    background: #0f9d58;
+    background: #f0768b;
 }
 
 @media only screen and (min-width: 900px) {
@@ -1629,8 +1666,8 @@ thead {
     margin: 0 0.5rem;
     padding: 0;
     color: #fff;
-    border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);
+    border: 1px solid #f0768b;
+    background: radial-gradient(#ffb8c6, #f0768b);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1806,8 +1843,8 @@ thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to right, #ffb8c6 0%, #f0768b 100%);
+    border: 1px solid #ffb8c6;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
