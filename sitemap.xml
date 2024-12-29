@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://blog.nev8r.top/baidu_verify_codeva-fQHAnuboDN.html</loc>
+    
+    <lastmod>2024-12-29</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://blog.nev8r.top/posts/f890fa03/</loc>
     
     <lastmod>2024-12-29</lastmod>
@@ -92,7 +101,7 @@
 
   
   <url>
-    <loc>http://blog.nev8r.top/tags/default/</loc>
+    <loc>http://blog.nev8r.top/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/</loc>
     <lastmod>2024-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -113,7 +122,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nev8r.top/tags/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/</loc>
+    <loc>http://blog.nev8r.top/tags/default/</loc>
     <lastmod>2024-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -122,7 +131,7 @@
 
   
   <url>
-    <loc>http://blog.nev8r.top/categories/default/</loc>
+    <loc>http://blog.nev8r.top/categories/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/</loc>
     <lastmod>2024-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -136,7 +145,7 @@
   </url>
   
   <url>
-    <loc>http://blog.nev8r.top/categories/%E6%AF%8F%E6%97%A5%E6%97%A9%E6%8A%A5/</loc>
+    <loc>http://blog.nev8r.top/categories/default/</loc>
     <lastmod>2024-12-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
