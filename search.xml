@@ -60,7 +60,8 @@
 <h3 id="Git工作流程"><a href="#Git工作流程" class="headerlink" title="Git工作流程"></a>Git工作流程</h3><p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031704980.png" alt="Git工作流程"></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. <span class="built_in">clone</span>（克隆）: 从远程仓库中克隆代码到本地仓库</span><br><span class="line">2. checkout （检出）:从本地仓库中检出一个仓库分支然后进行修订</span><br><span class="line">3. add（添加）: 在提交前先将代码提交到暂存区</span><br><span class="line">4. commit（提交）: 提交到本地仓库。本地仓库中保存修改的各个历史版本</span><br><span class="line">5. fetch (抓取) ： 从远程库，抓取到本地仓库，不进行任何的合并动作，一般操作比较少。</span><br><span class="line">6. pull (拉取) ： 从远程库拉到本地库，自动进行合并(merge)，然后放到到工作区，相当于</span><br><span class="line">fetch+merge</span><br><span class="line"> 7. push（推送） : 修改完成后，需要和团队成员共享代码时，将代码推送到远程仓库</span><br></pre></td></tr></table></figure>
 
-<h1 id="Git安装与常用命令"><a href="#Git安装与常用命令" class="headerlink" title="Git安装与常用命令"></a>Git安装与常用命令</h1><h2 id="Git环境配置"><a href="#Git环境配置" class="headerlink" title="Git环境配置"></a>Git环境配置</h2><h3 id="下载与安装（win"><a href="#下载与安装（win" class="headerlink" title="下载与安装（win)"></a>下载与安装（win)</h3><p>下载地址：<a href="https://git-scm.com/%EF%BC%8C%E5%9C%A8%E5%AE%98%E7%BD%91%E4%B8%8B%E8%BD%BD%E4%B8%8B%E8%BD%BD%E5%99%A8%EF%BC%8C%E5%85%A8%E9%83%A8%E9%BB%98%E8%AE%A4%E5%8D%B3%E5%8F%AF%EF%BC%8C%E4%B9%9F%E5%8F%AF%E4%BB%A5%E8%87%AA%E5%B7%B1%E8%AE%BE%E7%BD%AE%E8%B7%AF%E5%BE%84">https://git-scm.com/，在官网下载下载器，全部默认即可，也可以自己设置路径</a></p>
+<h1 id="Git安装与常用命令"><a href="#Git安装与常用命令" class="headerlink" title="Git安装与常用命令"></a>Git安装与常用命令</h1><h2 id="Git环境配置"><a href="#Git环境配置" class="headerlink" title="Git环境配置"></a>Git环境配置</h2><h3 id="下载与安装（win"><a href="#下载与安装（win" class="headerlink" title="下载与安装（win)"></a>下载与安装（win)</h3><p>下载地址：<a href="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>在官网下载下载器，全部默认即可，也可以自己设置路径</p>
 <p>查看是否安装成功</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git -v</span><br></pre></td></tr></table></figure>
 
@@ -69,7 +70,7 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name “xxx”</span><br><span class="line">git config --global user.email “xxx”</span><br></pre></td></tr></table></figure>
 
 <p>查看配置信息</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line"> git config --global user.email</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global user.name</span><br><span class="line">git config --global user.email</span><br></pre></td></tr></table></figure>
 
 <h3 id="为常用指令配置别名"><a href="#为常用指令配置别名" class="headerlink" title="为常用指令配置别名"></a>为常用指令配置别名</h3><ol>
 <li><p>打开用户目录，创建 .bashrc 文件</p>
@@ -84,7 +85,7 @@
 <h3 id="解决GitBash乱码问题"><a href="#解决GitBash乱码问题" class="headerlink" title="解决GitBash乱码问题"></a>解决GitBash乱码问题</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git config --global core.quotepath false</span><br></pre></td></tr></table></figure>
 
 <p> ${git_home}&#x2F;etc&#x2F;bash.bashrc 文件最后加入下面两行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LANG=&quot;zh_CN.UTF-8&quot;</span><br><span class="line"> export LC_ALL=&quot;zh_CN.UTF-8&quot;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LANG=&quot;zh_CN.UTF-8&quot;</span><br><span class="line">export LC_ALL=&quot;zh_CN.UTF-8&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="搭建本地Git仓库"><a href="#搭建本地Git仓库" class="headerlink" title="搭建本地Git仓库"></a>搭建本地Git仓库</h2><ol>
 <li>在电脑任意位置创建文件夹，打开git bash<br>  <img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031728774.png"></li>
@@ -92,20 +93,38 @@
 </ol>
 <p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031730332.png"></p>
 <h2 id="Git-基础操作指令-状态转换"><a href="#Git-基础操作指令-状态转换" class="headerlink" title="Git 基础操作指令(状态转换)"></a>Git 基础操作指令(状态转换)</h2><p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031732698.png"></p>
-<h3 id="查看当前状态"><a href="#查看当前状态" class="headerlink" title="查看当前状态"></a>查看当前状态</h3><p>作用：查看的修改的状态（暂存区、工作区）</p>
+<h3 id="查看当前状态"><a href="#查看当前状态" class="headerlink" title="查看当前状态"></a>查看当前状态</h3><ul>
+<li>作用：查看的修改的状态（暂存区、工作区）</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
 
-<h3 id="添加工作区到暂存区-add"><a href="#添加工作区到暂存区-add" class="headerlink" title="*添加工作区到暂存区(add)"></a>*添加工作区到暂存区(add)</h3><p>作用：添加工作区一个或多个文件的修改到暂存区<br>命令形式：gitadd单个文件名|通配符</p>
+<h3 id="添加工作区到暂存区-add"><a href="#添加工作区到暂存区-add" class="headerlink" title="*添加工作区到暂存区(add)"></a>*添加工作区到暂存区(add)</h3><ul>
+<li>作用：添加工作区一个或多个文件的修改到暂存区</li>
+<li>命令形式：gitadd单个文件名|通配符</li>
+</ul>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">将所有修改加入暂存区：</span></span><br><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
-<h3 id="提交暂存区到本地仓库-commit"><a href="#提交暂存区到本地仓库-commit" class="headerlink" title="*提交暂存区到本地仓库(commit)"></a>*提交暂存区到本地仓库(commit)</h3><p>作用：提交暂存区内容到本地仓库的当前分支 </p>
-<p>命令形式：</p>
+<p>例子：创建一个文件，将修改加入暂存区</p>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042057617.png"></p>
+<h3 id="提交暂存区到本地仓库-commit"><a href="#提交暂存区到本地仓库-commit" class="headerlink" title="*提交暂存区到本地仓库(commit)"></a>*提交暂存区到本地仓库(commit)</h3><ul>
+<li><p>作用：提交暂存区内容到本地仓库的当前分支 </p>
+</li>
+<li><p>命令形式：</p>
+</li>
+</ul>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &#x27;注释内容</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看提交日志-log"><a href="#查看提交日志-log" class="headerlink" title="查看提交日志(log)"></a>查看提交日志(log)</h3><p>作用:查看提交记录</p>
-<p> 命令形式：git log [option]</p>
+<p> 将修改提交到本地仓库，提交记录内容为：commit t1</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git commit -m &#x27;commit t1&#x27;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042222440.png"></p>
+<h3 id="查看提交日志-log"><a href="#查看提交日志-log" class="headerlink" title="查看提交日志(log)"></a>查看提交日志(log)</h3><ul>
+<li><p>作用:查看提交记录</p>
+</li>
+<li><p>命令形式：git log [option]</p>
+</li>
+<li><p>options</p>
 <ul>
-<li>options<ul>
 <li>–all 显示所有分支</li>
 <li>–pretty&#x3D;oneline 将提交信息显示为一行</li>
 <li>–abbrev-commit 使得输出的commitId更简短</li>
@@ -113,7 +132,25 @@
 </ul>
 </li>
 </ul>
-<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3></div>]]></content>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042223033.png"></p>
+<h3 id="版本回退"><a href="#版本回退" class="headerlink" title="版本回退"></a>版本回退</h3><ul>
+<li>作用：版本切换 </li>
+<li>命令形式：git reset –hard commitID </li>
+<li>commitID 可以使用 git-log 或 git log指令查看 </li>
+<li>如何查看已经删除的记录？ <ul>
+<li>git reflog </li>
+<li>这个指令可以看到已经删除的提交记录</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#修改f1.txt内容</span><br><span class="line"># 将修改加入暂存区</span><br><span class="line">git add .</span><br><span class="line"> # # 将修改提交到本地仓库，提交记录内容为：update f1</span><br><span class="line"> git commit --m &#x27;update f1&#x27;</span><br><span class="line"> # 查看日志</span><br><span class="line">git log</span><br><span class="line"> # 以精简的方式显示提交记录</span><br><span class="line">git-log</span><br><span class="line"> ####################将最后一次修改还原##################</span><br><span class="line"> # 查看提交记录</span><br><span class="line">git-log</span><br><span class="line"># 找到倒数第2次提交的commitID</span><br><span class="line"># 版本回退</span><br><span class="line">git reset commitID --hard</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042229605.png" alt="修改f1"></p>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042231485.png" alt="回退"></p>
+<h3 id="添加文件至忽略列表"><a href="#添加文件至忽略列表" class="headerlink" title="添加文件至忽略列表"></a>添加文件至忽略列表</h3><p>创建 .gitignore 文件，即需要忽略的文件的列表</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">no .a files</span></span><br><span class="line"> *.a</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">but <span class="keyword">do</span> track lib.a, even though you<span class="string">&#x27;re ignoring .a files above</span></span></span><br><span class="line"> !lib.a</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">only ignore the TODO file in the current directory, not subdir/TODO</span></span></span><br><span class="line"> /TODO</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore all files in the build/ directory</span></span></span><br><span class="line"> build/</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore doc/notes.txt, but not doc/server/arch.txt</span></span></span><br><span class="line"> doc/*.txt</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore all .pdf files in the doc/ directory</span></span></span><br><span class="line"> doc/**/*.pdf</span><br></pre></td></tr></table></figure>
+
+</div>]]></content>
       <categories>
         <category>后端</category>
       </categories>
