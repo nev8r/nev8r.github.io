@@ -3,7 +3,7 @@
   <entry>
     <title>C Plus Plus</title>
     <url>/posts/7dc50664/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="postchat_postcontent"><meta name="referrer" content="no-referrer">
+    <content><![CDATA[<div id="postchat_postcontent"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><meta name="referrer" content="no-referrer">
 
 </div>]]></content>
       <categories>
@@ -14,9 +14,9 @@
       </tags>
   </entry>
   <entry>
-    <title>【每日早报】-2025-01-03 - 星期五</title>
-    <url>/posts/285d29da/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="postchat_postcontent"><!DOCTYPE html>
+    <title>【每日早报】-2025-01-04 - 星期六</title>
+    <url>/posts/5337e781/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-    <div style="text-align: center;"> <img src="https://file.alapi.cn/60s/202501031735837202.png" alt="每日早报" width="100%"> </div>
+    <div style="text-align: center;"> <img src="https://file.alapi.cn/60s/202501041735922702.png" alt="每日早报" width="100%"> </div>
 </body>
 
 </html></div>]]></content>
@@ -41,7 +41,17 @@
   <entry>
     <title>Git</title>
     <url>/posts/69c3279c/</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="postchat_postcontent"><meta name="referrer" content="no-referrer">
+    <content><![CDATA[<div id="postchat_postcontent"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><meta name="referrer" content="no-referrer">
+
+
+
+
+
+
+
+
+
+
 
 <h1 id="Git分布式版本控制工具"><a href="#Git分布式版本控制工具" class="headerlink" title="Git分布式版本控制工具"></a>Git分布式版本控制工具</h1><h2 id="Git-概述："><a href="#Git-概述：" class="headerlink" title="Git 概述："></a>Git 概述：</h2><h3 id="开发场景中的应用"><a href="#开发场景中的应用" class="headerlink" title="开发场景中的应用"></a>开发场景中的应用</h3><ol>
 <li>备份</li>
@@ -88,7 +98,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">export LANG=&quot;zh_CN.UTF-8&quot;</span><br><span class="line">export LC_ALL=&quot;zh_CN.UTF-8&quot;</span><br></pre></td></tr></table></figure>
 
 <h2 id="搭建本地Git仓库"><a href="#搭建本地Git仓库" class="headerlink" title="搭建本地Git仓库"></a>搭建本地Git仓库</h2><ol>
-<li>在电脑任意位置创建文件夹，打开git bash<br>  <img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031728774.png"></li>
+<li>在电脑任意位置创建文件夹，打开git bash<br> <img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031728774.png"></li>
 <li>执行命令git init</li>
 </ol>
 <p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501031730332.png"></p>
@@ -143,19 +153,249 @@
 </ul>
 </li>
 </ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#修改f1.txt内容</span><br><span class="line"># 将修改加入暂存区</span><br><span class="line">git add .</span><br><span class="line"> # # 将修改提交到本地仓库，提交记录内容为：update f1</span><br><span class="line"> git commit --m &#x27;update f1&#x27;</span><br><span class="line"> # 查看日志</span><br><span class="line">git log</span><br><span class="line"> # 以精简的方式显示提交记录</span><br><span class="line">git-log</span><br><span class="line"> ####################将最后一次修改还原##################</span><br><span class="line"> # 查看提交记录</span><br><span class="line">git-log</span><br><span class="line"># 找到倒数第2次提交的commitID</span><br><span class="line"># 版本回退</span><br><span class="line">git reset commitID --hard</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_">#</span><span class="language-bash">修改f1.txt内容</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将修改加入暂存区</span></span><br><span class="line">git add .</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="comment"># 将修改提交到本地仓库，提交记录内容为：update f1</span></span></span><br><span class="line"> git commit --m &#x27;update f1&#x27;</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">查看日志</span></span><br><span class="line">git log</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">以精简的方式显示提交记录</span></span><br><span class="line">git-log</span><br><span class="line"><span class="meta prompt_"> #</span><span class="language-bash"><span class="comment">###################将最后一次修改还原##################</span></span></span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">查看提交记录</span></span><br><span class="line">git-log</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">找到倒数第2次提交的commitID</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">版本回退</span></span><br><span class="line">git reset commitID --hard</span><br></pre></td></tr></table></figure>
 
 <p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042229605.png" alt="修改f1"></p>
 <p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042231485.png" alt="回退"></p>
 <h3 id="添加文件至忽略列表"><a href="#添加文件至忽略列表" class="headerlink" title="添加文件至忽略列表"></a>添加文件至忽略列表</h3><p>创建 .gitignore 文件，即需要忽略的文件的列表</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">no .a files</span></span><br><span class="line"> *.a</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash">but <span class="keyword">do</span> track lib.a, even though you<span class="string">&#x27;re ignoring .a files above</span></span></span><br><span class="line"> !lib.a</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">only ignore the TODO file in the current directory, not subdir/TODO</span></span></span><br><span class="line"> /TODO</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore all files in the build/ directory</span></span></span><br><span class="line"> build/</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore doc/notes.txt, but not doc/server/arch.txt</span></span></span><br><span class="line"> doc/*.txt</span><br><span class="line"><span class="meta prompt_"> # </span><span class="language-bash"><span class="string">ignore all .pdf files in the doc/ directory</span></span></span><br><span class="line"> doc/**/*.pdf</span><br></pre></td></tr></table></figure>
 
+<h2 id="分支branch"><a href="#分支branch" class="headerlink" title="分支branch"></a>分支branch</h2><p>介绍：几乎所有的版本控制系统都以某种形式支持分支。 使用分支意味着你可以把你的工作从开发主线上分离 开来进行重大的Bug修改、开发新的功能，以免影响开发主线。</p>
+<h3 id="查看本地分支"><a href="#查看本地分支" class="headerlink" title="查看本地分支"></a>查看本地分支</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042246802.png"></p>
+<h3 id="创建本地分支"><a href="#创建本地分支" class="headerlink" title="创建本地分支"></a>创建本地分支</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch 分支名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042246438.png"></p>
+<h3 id="切换分支-checkout"><a href="#切换分支-checkout" class="headerlink" title="切换分支(checkout)"></a>切换分支(checkout)</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git checkout 分支名称</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042247913.png"></p>
+<h3 id="合并分支-merge"><a href="#合并分支-merge" class="headerlink" title="合并分支(merge)"></a>合并分支(merge)</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git merge 分支名称</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建并切换</span></span><br><span class="line">git checkout -b 分支名</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042248488.png"></p>
+<h3 id="删除分支"><a href="#删除分支" class="headerlink" title="删除分支"></a>删除分支</h3><p><strong>不能删除当前分支，只能删除其他分支</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git branch -d b1 删除分支时，需要做各种检查</span><br><span class="line">git branch -D b1 不做任何检查，强制删除</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042249887.png"></p>
+<h3 id="解决冲突"><a href="#解决冲突" class="headerlink" title="解决冲突"></a>解决冲突</h3><p>当两个分支上对文件的修改可能会存在冲突，例如同时修改了同一个文件的同一行，这时就需要手动解 决冲突，解决冲突步骤如下： </p>
+<pre><code> 1. 处理文件中冲突的地方
+ 2. 将解决完冲突的文件加入暂存区(add) 
+ 3. 提交到仓库(commit) 
+</code></pre>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501042252626.png"></p>
+<h1 id="Git远程仓库"><a href="#Git远程仓库" class="headerlink" title="Git远程仓库"></a>Git远程仓库</h1><h2 id="注册github"><a href="#注册github" class="headerlink" title="注册github"></a>注册github</h2><p><a href="https://github.com/">https://github.com/</a></p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062208486.png"></p>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062208095.png"></p>
+<h2 id="配置ssh公钥"><a href="#配置ssh公钥" class="headerlink" title="配置ssh公钥"></a>配置ssh公钥</h2><ul>
+<li>生成SSH公钥</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>不断回车 如果公钥已经存在，则自动覆盖</p>
+</li>
+<li><p>设置账户共公钥 </p>
+<ul>
+<li><p>获取公钥 </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cat ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062212453.png"></p>
+</li>
+</ul>
+</li>
+<li><p>验证</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062213213.png"></p>
+</li>
+</ul>
+<h2 id="操作远程仓库"><a href="#操作远程仓库" class="headerlink" title="操作远程仓库"></a>操作远程仓库</h2><h3 id="添加远程仓库"><a href="#添加远程仓库" class="headerlink" title="添加远程仓库"></a>添加远程仓库</h3><ul>
+<li><p>命令： git remote add &lt;远端名称&gt; &lt;仓库路径&gt; </p>
+<ul>
+<li><p>远端名称，默认是origin，取决于远端服务器设置 </p>
+</li>
+<li><p>仓库路径，从远端服务器获取此URL </p>
+</li>
+<li><p>例如: </p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:nev8r/git_test.git</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062215547.png"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="查看远程仓库"><a href="#查看远程仓库" class="headerlink" title="查看远程仓库"></a>查看远程仓库</h3><ul>
+<li>命令：git remote</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062216023.png"></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><ul>
+<li>命令：git push [-f] [–set-upstream] [远端名称 [本地分支名][:远端分支名] ] [:远端分支名] ]<ul>
+<li>如果远程分支名和本地分支名称相同，则可以只写本地分支 <ul>
+<li><code>git push origin master</code></li>
+</ul>
+</li>
+<li>-f 表示强制覆盖</li>
+<li><code>--set-upstream</code> 推送到远端的同时并且建立起和远端分支的关联关系。 <ul>
+<li><code>git push --set-upstream origin master</code></li>
+</ul>
+</li>
+<li>如果当前分支已经和远端分支关联，则可以省略分支名和远端名。<ul>
+<li>git push 将master分支推送到已关联的远端分支。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062232628.png"></p>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062233786.png" alt="推送成功"></p>
+<h3 id="本地分支与远程分支的关联关系"><a href="#本地分支与远程分支的关联关系" class="headerlink" title="本地分支与远程分支的关联关系"></a>本地分支与远程分支的关联关系</h3><ul>
+<li>查看关联关系我们可以使用  <code>git branch -vv</code>命令</li>
+</ul>
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501062236869.png"></p>
+<h3 id="从远程仓库克隆"><a href="#从远程仓库克隆" class="headerlink" title="从远程仓库克隆"></a>从远程仓库克隆</h3><ul>
+<li>git clone &lt;仓库路径&gt; [本地目录]</li>
+<li>本地目录可以省略，会自动生成一个目录</li>
+</ul>
+<h3 id="从远程仓库中抓取和拉取"><a href="#从远程仓库中抓取和拉取" class="headerlink" title="从远程仓库中抓取和拉取"></a>从远程仓库中抓取和拉取</h3><p>远程分支和本地的分支一样，我们可以进行merge操作，只是需要先把远端仓库里的更新都下载到本 地，再进行操作。 </p>
+<ul>
+<li><p>抓取 命令：<code>git fetch [remote name] [branch name]</code> </p>
+<ul>
+<li><p>抓取指令就是将仓库里的更新都抓取到本地，不会进行合并 </p>
+</li>
+<li><p>如果不指定远端名称和分支名，则抓取所有分支。</p>
+</li>
+</ul>
+</li>
+<li><p>拉取 命令：<code>git pull [remote name] [branch name]</code> </p>
+<ul>
+<li>拉取指令就是将远端仓库的修改拉到本地并自动进行合并，等同于fetch+merge </li>
+<li>如果不指定远端名称和分支名，则抓取所有并更新当前分支。</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.bilibili.com/video/BV1MU4y1Y7h5/?spm_id_from=333.337.search-card.all.click">黑马程序员Git全套教程，完整的git项目管理工具教程，一套精通git_哔哩哔哩_bilibili</a></p>
 </div>]]></content>
       <categories>
         <category>后端</category>
       </categories>
       <tags>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>【每日早报】-2025-01-03 - 星期五</title>
+    <url>/posts/285d29da/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日早报</title>
+</head>
+
+<body>
+    <div style="text-align: center;"> <img src="https://file.alapi.cn/60s/202501031735837202.png" alt="每日早报" width="100%"> </div>
+</body>
+
+</html></div>]]></content>
+      <categories>
+        <category>每日早报</category>
+      </categories>
+      <tags>
+        <tag>每日早报</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>704.二分查找</title>
+    <url>/posts/44211916/</url>
+    <content><![CDATA[<div id="postchat_postcontent"><link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><meta name="referrer" content="no-referrer">
+
+<h1 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="704. 二分查找"></a>704. <a href="https://leetcode.cn/problems/binary-search/description/">二分查找</a></h1><table>
+<thead>
+<tr>
+<th align="center">Category</th>
+<th align="center">Difficulty</th>
+<th align="center">Likes</th>
+<th align="center">Dislikes</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">algorithms</td>
+<td align="center">Easy (56.01%)</td>
+<td align="center">1677</td>
+<td align="center">-</td>
+</tr>
+</tbody></table>
+<p>给定一个 <code>n</code> 个元素有序的（升序）整型数组 <code>nums</code> 和一个目标值 <code>target</code> ，写一个函数搜索 <code>nums</code> 中的 <code>target</code>，如果目标值存在返回下标，否则返回 <code>-1</code>。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 9</span><br><span class="line">输出: 4</span><br><span class="line">解释: 9 出现在 nums 中并且下标为 4</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">输入: nums = [-1,0,3,5,9,12], target = 2</span><br><span class="line">输出: -1</span><br><span class="line">解释: 2 不存在 nums 中因此返回 -1</span><br></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ol>
+<li>你可以假设 <code>nums</code> 中的所有元素是不重复的。</li>
+<li><code>n</code> 将在 <code>[1, 10000]</code>之间。</li>
+<li><code>nums</code> 的每个元素都将在 <code>[-9999, 9999]</code>之间。</li>
+</ol>
+<p><strong>Solution</strong></p>
+<p><strong>写法一</strong>：左闭右闭</p>
+<ol>
+<li>l &#x3D;&#x3D; r 有意义，使用while (l &lt;&#x3D; r )</li>
+<li>nums[mid] &gt; target 时候，nums[mid]一定不是 target,下标r &#x3D; mid - 1;</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = numsSize - <span class="number">1</span>, mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501101444858.png"></p>
+<ul>
+<li>时间复杂度: O（logn)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<p><strong>写法二：</strong>左闭右开</p>
+<ol>
+<li>l &#x3D;&#x3D; r 在区间上没有意义，while( l &lt; r)</li>
+<li>nums[mid] &gt; target 时候，保持左闭右开,下标 r &#x3D; mid，实际有效区间是[l, mid -1],只是写法不同，本质和左闭右闭一致;</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">search</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = numsSize, mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            r = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://hexo-1308519941.cos.ap-guangzhou.myqcloud.com/blog/202501101455558.png" alt="image-20250110145525462"></p>
+<ul>
+<li>时间复杂度: O（logn)</li>
+<li>空间复杂度：O(1)</li>
+</ul>
+<h1 id="相关推荐"><a href="#相关推荐" class="headerlink" title="相关推荐"></a>相关推荐</h1><h2 id="35-搜索插入位置"><a href="#35-搜索插入位置" class="headerlink" title="35. 搜索插入位置"></a>35. <a href="https://leetcode.cn/problems/search-insert-position/description/">搜索插入位置</a></h2><p><strong>solution</strong></p>
+<p><strong>思路</strong>：找到第一个大于等于target的数的下标，如果没有，返回numSize,即最后一个位置</p>
+<p><strong>写法</strong>一：左闭右开</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">searchInsert</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = numsSize,mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt; r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            r = mid;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>写法二</strong>：左闭右闭</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">searchInsert</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = numsSize - <span class="number">1</span>,mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] == target)</span><br><span class="line">            <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">if</span>(nums[mid] &lt; target)</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> </span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> r + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="34-在排序数组中查找元素的第一个和最后一个位置"><a href="#34-在排序数组中查找元素的第一个和最后一个位置" class="headerlink" title="34. 在排序数组中查找元素的第一个和最后一个位置"></a>34. <a href="https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/">在排序数组中查找元素的第一个和最后一个位置</a></h2><p><strong>思路</strong>：左闭右闭</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="type">int</span>* <span class="title function_">searchRange</span><span class="params">(<span class="type">int</span>* nums, <span class="type">int</span> numsSize, <span class="type">int</span> target, <span class="type">int</span>* returnSize)</span> &#123;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>, r = numsSize - <span class="number">1</span>, mid;</span><br><span class="line">    <span class="type">int</span>* res = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="type">int</span>) * <span class="number">2</span>);</span><br><span class="line">    *returnSize = <span class="number">2</span>;</span><br><span class="line">    res[<span class="number">0</span>] = <span class="number">-1</span>,res[<span class="number">1</span>] = <span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">if</span>(numsSize == <span class="number">0</span>) </span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    <span class="keyword">while</span>( l &lt;= r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &lt; target) </span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid]==target)res[<span class="number">0</span>] = mid;</span><br><span class="line">            r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    l = <span class="number">0</span>;</span><br><span class="line">    r = numsSize - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">while</span>( l &lt;= r )&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(nums[mid] &gt; target) r = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[mid] == target) res[<span class="number">1</span>] = mid;</span><br><span class="line">            l = mid + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="69-x-的平方根"><a href="#69-x-的平方根" class="headerlink" title="69.x 的平方根"></a>69.<a href="https://leetcode.cn/problems/sqrtx/description/">x 的平方根</a></h2><p>思路：二分</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">mySqrt</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>,r = x;</span><br><span class="line">    <span class="type">int</span> mid;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> mul = (<span class="type">long</span> <span class="type">long</span>)mid * mid;</span><br><span class="line">        <span class="keyword">if</span>(mul == x) <span class="keyword">return</span> mid;</span><br><span class="line">        <span class="keyword">if</span>(mul &gt; x) r = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> l - <span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>思路：牛顿迭代</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">mySqrt</span><span class="params">(<span class="type">int</span> x)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span>(x == <span class="number">0</span>) <span class="keyword">return</span> x;</span><br><span class="line">    </span><br><span class="line">    <span class="type">double</span> c = x, x0 = x;</span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="type">double</span> xi = <span class="number">0.5</span> * (c/x0 + x0);</span><br><span class="line">        <span class="keyword">if</span>(x0 - xi &lt; <span class="number">1e-7</span>)<span class="keyword">break</span>;</span><br><span class="line">        x0 = xi;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> x0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="367-有效的完全平方数"><a href="#367-有效的完全平方数" class="headerlink" title="367.  有效的完全平方数"></a>367. <a href="https://leetcode.cn/problems/valid-perfect-square/"> 有效的完全平方数</a></h2><p>同69思路</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">#二分</span><br><span class="line"><span class="type">bool</span> <span class="title function_">isPerfectSquare</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line">    <span class="type">int</span> l = <span class="number">0</span>,r = num;</span><br><span class="line">    <span class="type">int</span> mid ;</span><br><span class="line">    <span class="keyword">while</span>(l &lt;= r)&#123;</span><br><span class="line">        mid = l + r &gt;&gt; <span class="number">1</span>;</span><br><span class="line">        <span class="type">long</span> <span class="type">long</span> mul  = (<span class="type">long</span> <span class="type">long</span>) mid * mid ;</span><br><span class="line">        <span class="keyword">if</span>(mul == num)<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        <span class="keyword">if</span>(mul &gt; num) r = mid - <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">else</span> l = mid + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">long</span> <span class="type">long</span>)(l - <span class="number">1</span>) * (l - <span class="number">1</span>) == num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#牛顿</span><br><span class="line"><span class="type">bool</span> <span class="title function_">isPerfectSquare</span><span class="params">(<span class="type">int</span> num)</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="type">double</span> c = num, x0 = num;</span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">true</span>)&#123;</span><br><span class="line">        <span class="type">double</span> xi = <span class="number">0.5</span> * (c/x0 + x0);</span><br><span class="line">        <span class="keyword">if</span>(x0 - xi &lt; <span class="number">1e-7</span>)<span class="keyword">break</span>;</span><br><span class="line">        x0 = xi;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="type">int</span>)x0 * (<span class="type">int</span>)x0 == num;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+</div>]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>二分查找</tag>
       </tags>
   </entry>
 </search>
